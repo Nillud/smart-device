@@ -59,15 +59,29 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: #00b3ff;
+    border-radius: 3px;
 
     @include vp-767 {
       width: 100%;
       padding: 20px;
     }
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 15px;
+    display: block;
+    width: 420px;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+    color: #ffffff;
   }
 
   &__close-btn {
@@ -83,6 +97,90 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 40px;
+    display: block;
+    width: 380px;
+    font-family: "PT Mono", Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input[type="text"] {
+    width: 420px;
+    margin-bottom: 20px;
+    padding: 15px 0 15px 15px;
+    background: rgba(4, 20, 39, 0.15);
+    border: none;
+    border-radius: 3px;
+    font-family: "PT Mono", Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+
+  & textarea {
+    width: 420px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 15px;
+    background: rgba(4, 20, 39, 0.15);
+    border: none;
+    border-radius: 3px;
+    font-family: "PT Mono", Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+
+  &__submit-button {
+    width: 420px;
+    margin-bottom: 9px;
+    padding: 15px 60px;
+    background: #041427;
+    border: none;
+    border-radius: 3px;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    margin-top: 11px;
+    font-family: "PT Mono", Courier, monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    opacity: 0.8;
   }
 
   &--responsive {

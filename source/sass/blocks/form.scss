@@ -1,0 +1,111 @@
+.form {
+  margin-bottom: 150px;
+  margin-top: 170px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  font-family: "PT Mono", Courier, monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.form__contacts {
+  margin-bottom: 20px;
+}
+
+.form__contacts label {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.form__contacts input {
+  padding: 15px 0 15px 15px;
+  width: 275px;
+  height: 50px;
+  background: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+
+  &::placeholder {
+    color: #ffffff;
+  }
+}
+
+.form textarea {
+  width: 584px;
+  margin-bottom: 35px;
+  padding: 0;
+  padding-top: 25px;
+  padding-left: 15px;
+  background: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+
+  &::placeholder {
+    color: #ffffff;
+  }
+}
+
+.form__confirm {
+  display: flex;
+}
+
+.form__confirm button {
+  box-sizing: border-box;
+  height: 45px;
+  padding: 15px 25px;
+  margin-right: 50px;
+  background: #041427;
+  border: none;
+  border-radius: 3px;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.form__confirm label {
+  margin-top: 15px;
+  display: flex;
+  color: #ffffff;
+}
+
+.form__text {
+  line-height: 16px;
+  max-width: 234px;
+}
+
+input[type="checkbox"]+.control-mark {
+  display: block;
+  margin-right: 11px;
+  margin-top: 8px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked+.control-mark {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    left: 2px;
+    top: 3px;
+    background: url("../img/sprite/checkbox-active.svg") no-repeat;
+  }
+}

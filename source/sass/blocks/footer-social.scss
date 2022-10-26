@@ -1,0 +1,36 @@
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  margin-right: 160px;
+}
+
+.footer-social__logo {
+  width: 215px;
+  margin-left: auto;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-social li {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.footer-social__item a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+}
+
+.footer-social svg {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}

@@ -1,0 +1,81 @@
+.main-nav {
+  position: fixed;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 120px;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.main-nav a {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.main-nav__logo {
+  display: flex;
+  margin-left: auto;
+  margin-right: 160px;
+}
+
+.main-nav__logo-image {
+  align-self: center;
+  height: 55px;
+}
+
+.main-nav__logo-text {
+  height: 45px;
+  align-self: center;
+  margin-left: 15px;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__contacts {
+  display: flex;
+  min-width: 225px;
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: 16px;
+  color: #f2f5f6;
+  min-height: 20px;
+  align-items: center;
+
+  & svg {
+    margin-right: 15px;
+  }
+}
+
+.main-nav__button {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  min-width: 160px;
+  height: 40px;
+  margin-left: 145px;
+  margin-right: auto;
+  align-self: center;
+  background: none;
+  border: 1px solid #F2F5F7;
+  border-radius: 3px;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #f2f5f7;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
