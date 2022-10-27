@@ -4,4 +4,8 @@
 
 .contacts {
   min-width: 180px;
+
+  @media (max-width: 1279px) {
+    margin-right: auto;
+  }
 }

@@ -4,6 +4,14 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1279px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 767px) {
+    width: 270px;
+  }
 }
 
 .form__field {
@@ -15,11 +23,21 @@
 
 .form__contacts {
   margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
 }
 
 .form__contacts label {
   &:not(:last-child) {
     margin-right: 30px;
+  }
+
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -34,6 +52,15 @@
 
   &::placeholder {
     color: #ffffff;
+  }
+
+  @media (max-width: 1279px) {
+    width: 320px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+    width: 270px;
   }
 }
 
@@ -51,14 +78,27 @@
   &::placeholder {
     color: #ffffff;
   }
+
+  @media (max-width: 1279px) {
+    width: 673px;
+  }
+
+  @media (max-width: 767px) {
+    width: 270px;
+  }
 }
 
 .form__confirm {
   display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .form__confirm button {
   box-sizing: border-box;
+  width: 265px;
   height: 45px;
   padding: 15px 25px;
   margin-right: 50px;
@@ -74,15 +114,36 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+
+  @media (max-width: 1279px) {
+    margin-right: 85px;
+    margin-bottom: 125px;
+  }
+
+  @media (max-width: 767px) {
+    width: 270px;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
 
 .form__confirm label {
   margin-top: 15px;
   display: flex;
   color: #ffffff;
+
+  @media (max-width: 1279px) {
+    margin-top: 5px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 90px;
+  }
 }
 
 .form__text {
+  opacity: 0.8;
+  font-size: 14px;
   line-height: 16px;
   max-width: 234px;
 }

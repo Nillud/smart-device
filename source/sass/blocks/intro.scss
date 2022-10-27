@@ -2,8 +2,22 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 102px;
+  margin-top: 100px;
   align-items: center;
+
+  @media (max-width: 1279px) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 25px;
+  }
+}
+
+.intro__block {
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
 }
 
 .intro h1 {
@@ -13,10 +27,20 @@
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 80px;
-  line-height: 94px;
+  font-size: 64px;
+  line-height: 75px;
   text-transform: uppercase;
   color: #f2f5f7;
+
+  @media (max-width: 1279px) {
+    margin-bottom: 20px;
+    padding-top: 80px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .intro p {
@@ -31,6 +55,15 @@
   line-height: 34px;
   color: #F2F5F7;
   text-align: left;
+
+  @media (max-width: 1279px) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .intro__button {
@@ -53,7 +86,32 @@
   color: #f2f5f7;
   cursor: pointer;
 
+  & span:last-child {
+    display: none;
+  }
+
   &:hover {
     opacity: 0.6;
+  }
+
+  @media (max-width: 1279px) {
+    margin-bottom: 205px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 190px;
+    font-size: 13px;
+    line-height: 16px;
+    min-width: 270px;
+    min-height: 40px;
+    padding: 10px 30px;
+
+    & span:first-child {
+      display: none;
+    }
+
+    & span:last-child {
+      display: block;
+    }
   }
 }
