@@ -28,6 +28,10 @@
   margin-left: auto;
   margin-right: 160px;
 
+  &:focus {
+    outline: 1px #ffffff solid;
+  }
+
   @media (max-width: 1279px) {
     width: 215px;
     height: 55px;

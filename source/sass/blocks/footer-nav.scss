@@ -11,21 +11,36 @@
   }
 }
 
-.footer-nav__section {
-  margin-top: 50px;
-  margin-bottom: 45px;
+.footer-nav__section button {
+  display: none;
 
-  &:first-child {
-    margin-left: auto;
-  }
+  @media (max-width: 767px) {
+    display: block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
 
-  &:last-child {
-    margin-right: auto;
-  }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 1px;
+      left: 0;
+      background-color: #c4c4c4;
+    }
 
-  @media (max-width: 1279px) {
-    margin-top: 0;
-    margin-bottom: 0;
+    &::after {
+      rotate: 90deg;
+    }
+
+    :hover {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -43,13 +58,70 @@
   }
 }
 
-.footer-nav__section li {
-  margin-right: 30px;
-  margin-bottom: 10px;
+.footer-nav__section {
+  margin-top: 50px;
+  margin-bottom: 45px;
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+
+  @media (max-width: 1279px) {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 50px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 25px;
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.nojs button {
+      display: none;
+    }
+
+    &.inactive button {
+      display: block;
+    }
+
+    &.inactive .footer-nav__list {
+      display: none;
+    }
+
+    &.is-active button {
+      display: block;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &.is-active .footer-nav__list {
+      display: block;
+    }
+  }
 }
 
-.footer-nav__button {
-  display: none;
+.footer-nav__section li {
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+
+.footer-nav__accordeon {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-nav__section a {
@@ -59,6 +131,15 @@
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 
 .footer-nav__section p {
@@ -72,4 +153,9 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #FFFFFF;
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

@@ -1,6 +1,12 @@
 .questions {
   display: flex;
+  background: url("../img/feedback-background.png") no-repeat 0 -100px;
   background-color: #00b3ff;
+
+  @media (max-width: 1279px) {
+    background: none;
+    background-color: #00b3ff;
+  }
 
   @media (max-width: 676px) {
     padding: 0 25px;

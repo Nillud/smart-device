@@ -114,6 +114,11 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media (max-width: 1279px) {
     margin-right: 85px;
@@ -156,6 +161,10 @@ input[type="checkbox"]+.control-mark {
   height: 15px;
   border: 1px solid #FFFFFF;
   border-radius: 2px;
+}
+
+input[type="checkbox"]:focus+.control-mark {
+  outline: 1px #ffffff solid;
 }
 
 input[type="checkbox"]:checked+.control-mark {

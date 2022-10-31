@@ -2,6 +2,9 @@
   background-color: #041827;
 
   @media (max-width: 1279px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -71,8 +74,44 @@
   }
 
   @media (max-width: 767px) {
+    max-width: none;
+    margin: 0 auto;
     padding-bottom: 86px;
     grid-template-columns: 270px;
+  }
+}
+
+.products-n-service .products-n-service__item {
+  &--first-card {
+    background: url("../img/main-background.jpg") no-repeat -160px;
+    background-size: cover;
+  }
+
+  &--second-card {
+    background: url("../img/main-background.jpg") no-repeat -500px;
+    background-size: cover;
+  }
+
+  &--third-card {
+    background: url("../img/main-background.jpg") no-repeat -840px;
+    background-size: cover;
+  }
+
+  @media (max-width: 1279px) {
+    &--first-card {
+      background: url("../img/main-background.jpg") no-repeat -500px -620px;
+      background-size: auto;
+    }
+
+    &--second-card {
+      background: url("../img/main-background.jpg") no-repeat -900px;
+      background-size: auto;
+    }
+
+    &--third-card {
+      background: url("../img/main-background.jpg") no-repeat -240px -400px;
+      background-size: auto;
+    }
   }
 }
 

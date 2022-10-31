@@ -1,19 +1,32 @@
 .site-sections {
   @media (max-width: 1279px) {
     max-width: 220px;
-    margin-left: auto;
-    margin-right: 120px;
+    margin-left: 50px;
+    margin-right: 105px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: none;
+    margin: 0;
   }
 }
 
 .site-sections ul {
   max-width: 500px;
+
+  @media (max-width: 767px) {
+    max-width: none;
+  }
 }
 
 .site-sections li {
   display: block;
   width: 220px;
   height: auto;
+
+  @media (max-width: 767px) {
+    width: none;
+  }
 }
 
 .site-sections a {

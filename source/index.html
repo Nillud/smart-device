@@ -11,7 +11,7 @@
     <link rel="preload" href="fonts/roboto-condensed-v25-latin-700.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body data-body>
     <div class="wrapper">
       <header>
         <nav class="main-nav">
@@ -37,15 +37,15 @@
               </a>
             </li>
           </ul>
-          <button class="main-nav__button">Заказать звонок</button>
+          <button class="main-nav__button" data-request-button>Заказать звонок</button>
         </nav>
       </header>
       <main>
-        <section class="intro" style="background: url('img/main-background.jpg') no-repeat 0 -120px;">
+        <section class="intro">
           <div class="intro__block">
             <h1 class="intro__header">Печатные платы</h1>
             <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <button class="intro__button">
+            <button class="intro__button" data-scroll-button>
               <span>Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </button>
@@ -106,9 +106,9 @@
             <h2 class="about-company__header">О компании</h2>
             <p class="about-company__description">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p class="about-company__description">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-            <p class="about-company__description-more">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
+            <p class="about-company__description-more" data-description>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
               Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
-            <button class="about-company__button">Подробнее</button>
+            <button class="about-company__button" data-button-more>Подробнее</button>
           </div>
         </section>
         <section class="products-n-service">
@@ -117,7 +117,7 @@
             <span>Товары и услуги Smart Device</span>
           </h2>
           <ul class="products-n-service__list">
-            <li class="products-n-service__item" style="background: url('img/main-background.jpg') no-repeat -160px; background-size: cover;">
+            <li class="products-n-service__item products-n-service__item--first-card">
               <a class="products-n-service__link" href="#">
                 <h3 class="products-n-service__item-header">Производство<br>печатных плат</h3>
                 <span class="products-n-service__button">
@@ -127,7 +127,7 @@
                 </span>
               </a>
             </li>
-            <li class="products-n-service__item" style="background: url('img/main-background.jpg') no-repeat -500px; background-size: cover;">
+            <li class="products-n-service__item products-n-service__item--second-card">
               <a class="products-n-service__link" href="#">
                 <h3 class="products-n-service__item-header">Монтаж печатных<br>плат</h3>
                 <span class="products-n-service__button">
@@ -137,7 +137,7 @@
                 </span>
               </a>
             </li>
-            <li class="products-n-service__item" style="background: url('img/main-background.jpg') no-repeat -840px; background-size: cover;">
+            <li class="products-n-service__item products-n-service__item--third-card">
               <a class="products-n-service__link" href="#">
                 <h3 class="products-n-service__item-header">Комплектующие<br>для светотехники</h3>
                 <span class="products-n-service__button">
@@ -149,20 +149,20 @@
             </li>
           </ul>
         </section>
-        <section class="questions">
+        <section class="questions" data-questions>
           <img src="img/feedback-airplane.png" alt="блок с вопросами." width="510" height="285">
           <form class="questions__form form" action="https://echo.htmlacademy.ru" method="get">
             <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
             <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
             <div class="form__contacts">
-              <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя"></label>
-              <label class="form__field"><input type="number" name="phone" id="phone" placeholder="Телефон"></label>
+              <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" required></label>
+              <label class="form__field"><input type="tel" name="phone" id="phone" placeholder="Телефон" data-phone required></label>
             </div>
             <textarea class="form__field" name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
             <div class="form__confirm">
               <button class="form__button" type="submit">Задать вопрос</button>
               <label class="form__checkbox form__field">
-                <input class="visually-hidden" type="checkbox" name="personal-data" id="personal-data" checked>
+                <input class="visually-hidden" type="checkbox" name="personal-data" id="personal-data" checked required>
                 <span class="control-mark"></span>
                 <span class="form__text">Я согласен на обработку  персональных данных</span>
               </label>
@@ -201,9 +201,11 @@
               </li>
             </ul>
           </div>
-          <div class="footer-nav__section site-sections">
-            <p class="footer-nav__header">Разделы сайта</p>
-            <button class="footer-nav__button"></button>
+          <div class="footer-nav__section nojs site-sections" data-accordeon-sections>
+            <div class="footer-nav__accordeon">
+              <p class="footer-nav__header">Разделы сайта</p>
+              <button class="footer-nav__button" data-accordeon-button></button>
+            </div>
             <ul class="footer-nav__list">
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav__link">
@@ -242,9 +244,11 @@
               </li>
             </ul>
           </div>
-          <div class="footer-nav__section contacts">
-            <p class="footer-nav__header">Наш офис</p>
-            <button class="footer-nav__button"></button>
+          <div class="footer-nav__section nojs contacts" data-accordeon-contacts>
+            <div class="footer-nav__accordeon">
+              <p class="footer-nav__header">Наш офис</p>
+              <button class="footer-nav__button" data-accordeon-button></button>
+            </div>
             <ul class="footer-nav__list">
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav-link">
@@ -287,12 +291,12 @@
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
           <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="get">
-            <label><input class="modal__input" type="text" name="call-name" id="call-name" placeholder="Имя"></label>
-            <label><input class="modal__input" type="text" name="call-phone" id="call-phone" placeholder="Телефон"></label>
+            <label><input class="modal__input" type="text" name="call-name" id="call-name" placeholder="Имя" required></label>
+            <label><input class="modal__input" type="tel" name="call-phone" id="call-phone" placeholder="Телефон" data-phone-modal required></label>
             <textarea name="call-question" id="call-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
             <button class="modal__submit-button" type="submit">Отправить</button>
             <label class="modal__checkbox">
-              <input class="visually-hidden" type="checkbox" name="call-personal-data" id="call-personal-data">
+              <input class="visually-hidden" type="checkbox" name="call-personal-data" id="call-personal-data" required>
               <span class="control-mark"></span>
               <span class="modal__text">Я согласен на обработку  персональных данных</span>
             </label>
@@ -301,6 +305,7 @@
       </div>
     </div>
 
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

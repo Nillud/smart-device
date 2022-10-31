@@ -13,6 +13,9 @@
   }
 
   @media (max-width: 767px) {
+    margin-top: 35px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
     flex-direction: column;
   }
 }
@@ -22,6 +25,11 @@
   margin-left: auto;
   margin-bottom: 30px;
   display: flex;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media (max-width: 1279px) {
     margin-bottom: 0;
@@ -48,11 +56,22 @@
     margin-top: 10px;
     margin-right: 45px;
   }
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
 }
 
 .footer-social li {
   &:not(:last-child) {
     margin-right: 15px;
+  }
+
+  @media (max-width: 767px) {
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -61,6 +80,11 @@
   width: 40px;
   height: 40px;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .footer-social svg {
