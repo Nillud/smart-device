@@ -3,20 +3,24 @@
   margin: 0 auto;
   max-width: 1220px;
 
+  @media (max-width: 1279px) {
+    max-width: 678px;
+  }
+
   @media (max-width: 767px) {
     padding: 25px;
   }
 }
 
 .about-company img {
+  max-width: none;
   height: 320px;
   margin-right: 100px;
   margin-bottom: 100px;
 
   @media (max-width: 1279px) {
-    margin-left: auto;
-    margin-right: 30px;
-    margin-bottom: 140px;
+    margin-top: 14px;
+    margin-right: 29px;
   }
 
   @media (max-width: 767px) {
@@ -26,7 +30,6 @@
 
 .about-company__text {
   @media (max-width: 1279px) {
-    margin-right: auto;
     max-width: 495px;
   }
 
@@ -37,17 +40,24 @@
 
 .about-company h2 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+  letter-spacing: -2px;
   color: #041827;
+
+  @media (max-width: 1279px) {
+    max-width: 495px;
+    margin-bottom: 12px;
+  }
 
   @media (max-width: 767px) {
     font-size: 28px;
     line-height: 39px;
+    letter-spacing: -1.5px;
   }
 }
 
@@ -61,9 +71,23 @@
   line-height: 22px;
   color: #041827;
 
+  @media (max-width: 1279px) {
+    margin-bottom: 18px;
+  }
+
   @media (max-width: 767px) {
     font-size: 14px;
     line-height: 19px;
+  }
+}
+
+.about-company__description-mobile span {
+  @media (max-width: 767px) {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
   }
 }
 
@@ -78,7 +102,7 @@
 .about-company__button {
   box-sizing: border-box;
   display: block;
-  margin-top: 35px;
+  margin-top: 40px;
   margin-bottom: 120px;
   min-width: 180px;
   min-height: 45px;
@@ -101,11 +125,17 @@
   }
 
   @media (max-width: 1279px) {
-    margin-bottom: 80px;
+    margin-bottom: 79px;
     margin-top: 0;
+    padding-top: 11px;
+    letter-spacing: -1px;
   }
 
   @media (max-width: 767px) {
+    margin-bottom: 55px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: -4px;
     min-width: 160px;
     min-height: 35px;
   }

@@ -14,8 +14,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const buttonClose = document.querySelectorAll('[data-close-modal]');
   const scrollButton = document.querySelector('[data-scroll-button]');
   const questionsBlock = document.querySelector('[data-questions]');
+
   const buttonMore = document.querySelector('[data-button-more]');
   const aboutDescription = document.querySelector('[data-description]');
+  const aboutMobile = document.querySelector('[data-description-mobile');
 
   const accordeonSections = document.querySelector('[data-accordeon-sections]');
   const accordeonContacts = document.querySelector('[data-accordeon-contacts]');
@@ -72,9 +74,17 @@ window.addEventListener('DOMContentLoaded', () => {
   buttonMore.addEventListener('click', () => {
     if (buttonMore) {
       if (aboutDescription.classList.contains('is-active')) {
+        if (window.screen.width <= 767) {
+          if (aboutMobile.classList.contains('is-active')) {
+            aboutMobile.classList.remove('is-active');
+          }
+        }
         aboutDescription.classList.remove('is-active');
         buttonMore.textContent = 'Подробнее';
       } else {
+        if (window.screen.width <= 767) {
+          aboutMobile.classList.add('is-active');
+        }
         aboutDescription.classList.add('is-active');
         buttonMore.textContent = 'Свернуть';
       }

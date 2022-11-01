@@ -1,7 +1,7 @@
 .form {
+  margin-left: -5px;
   margin-bottom: 150px;
-  margin-top: 170px;
-  margin-right: auto;
+  margin-top: 165px;
   display: flex;
   flex-direction: column;
 
@@ -22,16 +22,22 @@
 }
 
 .form__contacts {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1279px) {
     margin-bottom: 0;
   }
 }
 
 .form__contacts label {
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 26px;
+  }
+
+  @media (max-width: 1279px) {
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -65,7 +71,8 @@
 }
 
 .form textarea {
-  max-width: 584px;
+  width: 580px;
+  height: 155px;
   margin-bottom: 35px;
   padding: 0;
   padding-top: 25px;
@@ -80,11 +87,16 @@
   }
 
   @media (max-width: 1279px) {
+    padding-top: 32px;
     max-width: 673px;
+    height: 155px;
   }
 
   @media (max-width: 767px) {
+    margin-bottom: 30px;
+    padding-top: 25px;
     width: 270px;
+    height: 180px;
   }
 }
 
@@ -123,11 +135,12 @@
   @media (max-width: 1279px) {
     margin-right: 85px;
     margin-bottom: 125px;
+    font-size: 13.5px;
   }
 
   @media (max-width: 767px) {
     width: 270px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-right: 0;
   }
 }
@@ -138,11 +151,12 @@
   color: #ffffff;
 
   @media (max-width: 1279px) {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   @media (max-width: 767px) {
-    margin-bottom: 90px;
+    margin-bottom: 88px;
+    margin-left: 5px;
   }
 }
 
@@ -156,7 +170,7 @@
 input[type="checkbox"]+.control-mark {
   display: block;
   margin-right: 11px;
-  margin-top: 8px;
+  margin-top: 7px;
   width: 15px;
   height: 15px;
   border: 1px solid #FFFFFF;

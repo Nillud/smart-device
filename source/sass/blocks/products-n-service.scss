@@ -19,8 +19,8 @@
   display: block;
   max-width: 1220px;
   margin: 0 auto;
-  margin-bottom: 50px;
-  padding-top: 70px;
+  margin-bottom: 53px;
+  padding-top: 66px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -29,13 +29,18 @@
   color: #FFFFFF;
 
   @media (max-width: 1279px) {
-    letter-spacing: 0.5;
+    padding-top: 56px;
+    margin-bottom: 37px;
+    letter-spacing: 0.3px;
     font-size: 33px;
   }
 
   @media (max-width: 767px) {
-    font-size: 28px;
+    padding-top: 46px;
+    margin-bottom: 30px;
+    font-size: 27px;
     line-height: 39px;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -67,7 +72,7 @@
   gap: 85px;
 
   @media (max-width: 1279px) {
-    padding-bottom: 80px;
+    padding-bottom: 75px;
     grid-template-columns: 670px;
     grid-template-rows: repeat(3, 250px);
     gap: 30px;
@@ -82,35 +87,99 @@
 }
 
 .products-n-service .products-n-service__item {
+  background-color: #041943;
+
   &--first-card {
-    background: url("../img/main-background.jpg") no-repeat -160px;
+    background-image: url("../img/production/desktop/production-1.jpg");
     background-size: cover;
   }
 
   &--second-card {
-    background: url("../img/main-background.jpg") no-repeat -500px;
+    background-image: url("../img/production/desktop/production-2.jpg");
     background-size: cover;
   }
 
   &--third-card {
-    background: url("../img/main-background.jpg") no-repeat -840px;
+    background-image: url("../img/production/desktop/production-3.jpg");
     background-size: cover;
+  }
+
+  @media (min-resolution: 2dppx) {
+    &--first-card {
+      background-image: url("../img/production/desktop/production-1@2x.jpg");
+      background-size: cover;
+    }
+
+    &--second-card {
+      background-image: url("../img/production/desktop/production-2@2x.jpg");
+      background-size: cover;
+    }
+
+    &--third-card {
+      background-image: url("../img/production/desktop/production-3@2x.jpg");
+      background-size: cover;
+    }
   }
 
   @media (max-width: 1279px) {
     &--first-card {
-      background: url("../img/main-background.jpg") no-repeat -500px -620px;
-      background-size: auto;
+      background-image: url("../img/production/tablet/production-1.jpg");
+      background-size: cover;
     }
 
     &--second-card {
-      background: url("../img/main-background.jpg") no-repeat -900px;
-      background-size: auto;
+      background-image: url("../img/production/tablet/production-2.jpg");
+      background-size: cover;
     }
 
     &--third-card {
-      background: url("../img/main-background.jpg") no-repeat -240px -400px;
-      background-size: auto;
+      background-image: url("../img/production/tablet/production-3.jpg");
+      background-size: cover;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &--first-card {
+        background-image: url("../img/production/tablet/production-1@2x.jpg");
+        background-size: cover;
+      }
+
+      &--second-card {
+        background-image: url("../img/production/tablet/production-2@2x.jpg");
+        background-size: cover;
+      }
+
+      &--third-card {
+        background-image: url("../img/production/tablet/production-3@2x.jpg");
+        background-size: cover;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &--first-card {
+      background-image: url("../img/production/mobile/production-1.jpg");
+    }
+
+    &--second-card {
+      background-image: url("../img/production/mobile/production-2.jpg");
+    }
+
+    &--third-card {
+      background-image: url("../img/production/mobile/production-3.jpg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      &--first-card {
+        background-image: url("../img/production/mobile/production-1@2x.jpg");
+      }
+
+      &--second-card {
+        background-image: url("../img/production/mobile/production-2@2x.jpg");
+      }
+
+      &--third-card {
+        background-image: url("../img/production/mobile/production-3@2x.jpg");
+      }
     }
   }
 }
@@ -128,7 +197,7 @@
   display: block;
   min-height: 55px;
   margin: 0;
-  padding: 50px 80px 0 40px;
+  padding: 47px 80px 0 40px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -138,19 +207,20 @@
 
   @media (max-width: 1279px) {
     padding: 0;
-    padding-top: 40px;
+    padding-top: 38px;
     padding-left: 45px;
+    font-size: 18.2px;
   }
 
   @media (max-width: 767px) {
-    padding-top: 30px;
+    padding-top: 27px;
     padding-left: 30px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 .products-n-service__list span {
-  margin-top: 480px;
+  margin-top: 483px;
   display: block;
   width: 60px;
   height: 60px;
@@ -159,13 +229,13 @@
   border-radius: 3px 0px 0px 0px;
 
   @media (max-width: 1279px) {
-    margin-top: 90px;
+    margin-top: 92px;
   }
 
   @media (max-width: 767px) {
     width: 40px;
     height: 40px;
-    margin-top: 120px;
+    margin-top: 123px;
   }
 }
 

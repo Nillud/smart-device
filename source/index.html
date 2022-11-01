@@ -17,7 +17,10 @@
         <nav class="main-nav">
           <a class="main-nav__logo">
             <img class="main-nav__logo-image" src="img/logo.svg" alt="логотип smart device" width="55" height="55">
-            <img class="main-nav__logo-text" src="img/logo-text.png" alt="логотип smart deivce." width="145" height="45">
+            <picture>
+              <source type="image/webp" srcset="img/logo-text.webp 1x, img/logo-text@2x.webp 2x">
+              <img class="main-nav__logo-text" src="img/logo-text.png" srcset="img/logo-text@2x.png" alt="логотип smart deivce." width="145" height="45">
+            </picture>
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -101,11 +104,14 @@
           </ul>
         </section>
         <section class="about-company">
-          <img src="img/about-company-year.png" alt="2022" width="150" height="320">
+          <picture>
+            <source type="image/webp" srcset="img/about-company-year.webp 1x, img/about-company-year@2x.webp 2x">
+            <img src="img/about-company-year.png" srcset="" alt="2022" width="150" height="320">
+          </picture>
           <div class="about-company__text">
             <h2 class="about-company__header">О компании</h2>
             <p class="about-company__description">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p class="about-company__description">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+            <p class="about-company__description-mobile">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span class="about-company__mobile" data-description-mobile>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
             <p class="about-company__description-more" data-description>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
               Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
             <button class="about-company__button" data-button-more>Подробнее</button>
@@ -150,7 +156,10 @@
           </ul>
         </section>
         <section class="questions" data-questions>
-          <img src="img/feedback-airplane.png" alt="блок с вопросами." width="510" height="285">
+          <picture>
+            <source type="image/webp" srcset="img/feedback-airplane.webp 1x, img/feedback-airplane@2x.png 2x">
+            <img src="img/feedback-airplane.png" alt="блок с вопросами." width="510" height="285">
+          </picture>
           <form class="questions__form form" action="https://echo.htmlacademy.ru" method="get">
             <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
             <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
@@ -175,7 +184,10 @@
           <div class="footer-nav__section footer-social">
             <a class="footer-social__logo">
               <img class="footer-social__logo-image" src="img/logo.svg" alt="логотип." width="55" height="55">
-              <img class="footer-social__logo-text" src="img/logo-text.png" alt="логотип smart deivce." width="145" height="45">
+              <picture>
+                <source type="image/webp" srcset="img/logo-text.webp 1x, img/logo-text@2x.webp 2x">
+                <img class="footer-social__logo-text" src="img/logo-text.png" alt="логотип smart deivce." width="145" height="45">
+              </picture>
             </a>
             <ul class="footer-social__list">
               <li class="footer-social__item">
@@ -214,17 +226,7 @@
               </li>
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav__link">
-                  Комплектующие
-                </a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="#" class="footer-nav__link">
                   Продукты
-                </a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="#" class="footer-nav__link">
-                  Доставка
                 </a>
               </li>
               <li class="footer-nav__item">
@@ -234,12 +236,22 @@
               </li>
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav__link">
-                  Контакты
+                  Монтаж печатных плат
                 </a>
               </li>
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav__link">
-                  Монтаж печатных плат
+                  Комплектующие
+                </a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">
+                  Доставка
+                </a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">
+                  Контакты
                 </a>
               </li>
             </ul>
