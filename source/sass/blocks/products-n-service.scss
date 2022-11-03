@@ -1,23 +1,16 @@
 .products-n-service {
   background-color: #041827;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  @media (max-width: 767px) {
-    padding-left: 25px;
-    padding-right: 25px;
   }
 }
 
 .products-n-service h2 {
   display: block;
-  max-width: 1220px;
+  width: 64%;
   margin: 0 auto;
   margin-bottom: 53px;
   padding-top: 66px;
@@ -28,14 +21,15 @@
   line-height: 51px;
   color: #FFFFFF;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
+    width: 87%;
     padding-top: 56px;
     margin-bottom: 37px;
     letter-spacing: 0.3px;
     font-size: 33px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     padding-top: 46px;
     margin-bottom: 30px;
     font-size: 27px;
@@ -49,7 +43,7 @@
     display: none;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     & span:first-child {
       display: none;
     }
@@ -65,25 +59,32 @@
   margin: 0 auto;
   padding: 0;
   padding-bottom: 140px;
-  max-width: 1220px;
+  width: 63%;
   display: grid;
-  grid-template-columns: repeat(3, 350px);
+  grid-template-columns: repeat(3, 28%);
   grid-template-rows: 650px;
   gap: 85px;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
+    width: 87%;
     padding-bottom: 75px;
-    grid-template-columns: 670px;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(3, 250px);
     gap: 30px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
+    width: 84%;
     max-width: none;
     margin: 0 auto;
     padding-bottom: 86px;
-    grid-template-columns: 270px;
+    grid-template-columns: 100%;
   }
+}
+
+.products-n-service li {
+  position: relative;
+  min-width: 240px;
 }
 
 .products-n-service .products-n-service__item {
@@ -104,7 +105,7 @@
     background-size: cover;
   }
 
-  @media (min-resolution: 2dppx) {
+  @include retina {
     &--first-card {
       background-image: url("../img/production/desktop/production-1@2x.jpg");
       background-size: cover;
@@ -121,7 +122,7 @@
     }
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     &--first-card {
       background-image: url("../img/production/tablet/production-1.jpg");
       background-size: cover;
@@ -137,7 +138,7 @@
       background-size: cover;
     }
 
-    @media (min-resolution: 2dppx) {
+    @include retina {
       &--first-card {
         background-image: url("../img/production/tablet/production-1@2x.jpg");
         background-size: cover;
@@ -155,7 +156,7 @@
     }
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     &--first-card {
       background-image: url("../img/production/mobile/production-1.jpg");
     }
@@ -168,7 +169,7 @@
       background-image: url("../img/production/mobile/production-3.jpg");
     }
 
-    @media (min-resolution: 2dppx) {
+  @include retina {
       &--first-card {
         background-image: url("../img/production/mobile/production-1@2x.jpg");
       }
@@ -188,7 +189,7 @@
   display: flex;
   flex-direction: column;
 
-  &:hover {
+  @include hover-focus {
     opacity: 0.6;
   }
 }
@@ -205,14 +206,14 @@
   line-height: 30px;
   color: #FFFFFF;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     padding: 0;
     padding-top: 38px;
     padding-left: 45px;
     font-size: 18.2px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     padding-top: 27px;
     padding-left: 30px;
     font-size: 16px;
@@ -220,7 +221,8 @@
 }
 
 .products-n-service__list span {
-  margin-top: 483px;
+  position: absolute;
+  bottom: 0;
   display: block;
   width: 60px;
   height: 60px;
@@ -228,14 +230,9 @@
   align-self: flex-end;
   border-radius: 3px 0px 0px 0px;
 
-  @media (max-width: 1279px) {
-    margin-top: 92px;
-  }
-
-  @media (max-width: 767px) {
+  @include vp-767 {
     width: 40px;
     height: 40px;
-    margin-top: 123px;
   }
 }
 
@@ -246,7 +243,7 @@
   width: 14px;
   height: 8px;
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin-top: 16px;
   }
 }

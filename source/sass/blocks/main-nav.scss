@@ -9,7 +9,7 @@
   justify-content: space-between;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     min-height: 100px;
     margin: 0;
   }
@@ -18,7 +18,7 @@
 .main-nav a {
   cursor: pointer;
 
-  &:hover {
+  @include hover-focus {
     opacity: 0.6;
   }
 }
@@ -30,13 +30,13 @@
   align-items: center;
   margin-left: auto;
   margin-top: 30px;
-  margin-right: 160px;
+  // margin-right: 160px;
 
   &:focus {
     outline: 1px #ffffff solid;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     width: 215px;
     height: 55px;
     margin-top: 20px;
@@ -44,7 +44,7 @@
     margin-left: 50px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     width: 35px;
     height: 35px;
     margin-top: 15px;
@@ -63,27 +63,26 @@
   margin-left: 15px;
   vertical-align: middle;
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     display: none;
   }
 }
 
 .main-nav ul {
-  height: 80px;
   display: flex;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  margin-top: 15px;
-  margin-right: 145px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin: 0;
     margin-right: 50px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     height: 60px;
     margin-right: 15px;
   }
@@ -95,7 +94,8 @@
       margin-right: 30px;
     }
   }
-  @media (max-width: 1279px) {
+
+  @include vp-1023 {
     margin-right: 20px;
   }
 }
@@ -113,7 +113,7 @@
     margin-right: 15px;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     min-width: 40px;
     min-height: 40px;
 
@@ -150,11 +150,11 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover {
+  @include hover-focus {
     opacity: 0.6;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     display: none;
   }
 }

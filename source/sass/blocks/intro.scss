@@ -8,21 +8,29 @@
   background-size: cover;
   background-color: #041827;
 
-  @media (max-width: 1279px) {
-    background-image: url("../img/main-background.jpg");
-    margin-top: 67px;
+  @include retina {
+    background-image: url("../img/main-background@2x.jpg");
   }
 
-  @media (max-width: 767px) {
+  @include vp-1023 {
+    background-image: url("../img/main-background.jpg");
+    margin-top: 67px;
+
+    background-image: url("../img/main-background@2x.jpg");
+  }
+
+  @include vp-767 {
     margin-top: 32px;
     padding: 0 25px;
     background-image: url("../img/main-background.jpg");
     background-position: -200px;
+
+    background-image: url("../img/main-background@2x.jpg");
   }
 }
 
 .intro__block {
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin: 0 auto;
   }
 }
@@ -41,7 +49,7 @@
   text-transform: uppercase;
   color: #f2f5f7;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     min-width: 670px;
     margin-top: 113px;
     margin-bottom: 0;
@@ -49,7 +57,7 @@
     letter-spacing: -2.5px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     min-width: 270px;
     margin-top: 118px;
     margin-bottom: 8px;
@@ -72,12 +80,12 @@
   color: #F2F5F7;
   text-align: left;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     max-width: 670px;
     margin-bottom: 57px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin-bottom: 44px;
     font-size: 14px;
     line-height: 22px;
@@ -109,17 +117,17 @@
     display: none;
   }
 
-  &:hover {
+  @include hover-focus {
     opacity: 0.6;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-left: 45px;
     margin-bottom: 205px;
     letter-spacing: -1px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin-left: 0;
     margin-bottom: 190px;
     font-size: 14px;

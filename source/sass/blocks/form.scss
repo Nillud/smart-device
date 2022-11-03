@@ -1,16 +1,14 @@
 .form {
+  width: 47.201%;
   margin-left: -5px;
   margin-bottom: 150px;
   margin-top: 165px;
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
+    width: 100%;
     margin: 0 auto;
-  }
-
-  @media (max-width: 767px) {
-    width: 270px;
   }
 }
 
@@ -22,35 +20,27 @@
 }
 
 .form__contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 0;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-bottom: 0;
   }
-}
 
-.form__contacts label {
-  &:not(:last-child) {
-    margin-right: 26px;
-  }
-
-  @media (max-width: 1279px) {
-    &:not(:last-child) {
-      margin-right: 26px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    &:not(:last-child) {
-      margin-right: 0;
-    }
+  @include vp-767 {
+    flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
 .form__contacts input {
   padding: 15px 0 15px 15px;
   margin-bottom: 20px;
-  width: 275px;
+  width: 98%;
+  min-width: 275px;
   height: 50px;
   background: rgba(4, 20, 39, 0.15);
   border: none;
@@ -61,17 +51,19 @@
     color: #ffffff;
   }
 
-  @media (max-width: 1279px) {
-    width: 320px;
+  @include vp-1023 {
+    width: 48%;
+    min-width: 320px;
   }
 
-  @media (max-width: 767px) {
-    width: 270px;
+  @include vp-767 {
+    width: 100%;
+    min-width: 270px;
   }
 }
 
 .form textarea {
-  width: 580px;
+  width: 100%;
   height: 155px;
   margin-bottom: 35px;
   padding: 0;
@@ -86,31 +78,32 @@
     color: #ffffff;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     padding-top: 32px;
-    max-width: 673px;
+    max-width: none;
     height: 155px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin-bottom: 30px;
     padding-top: 25px;
-    width: 270px;
     height: 180px;
   }
 }
 
 .form__confirm {
   display: flex;
+  flex-wrap: wrap;
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     flex-direction: column;
   }
 }
 
 .form__confirm button {
   box-sizing: border-box;
-  width: 265px;
+  width: 45%;
+  min-width: 250px;
   height: 45px;
   padding: 15px 25px;
   margin-right: 50px;
@@ -128,18 +121,19 @@
   color: #ffffff;
   cursor: pointer;
 
-  &:hover {
+  @include hover-focus {
     opacity: 0.6;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-right: 85px;
     margin-bottom: 125px;
     font-size: 13.5px;
   }
 
-  @media (max-width: 767px) {
-    width: 270px;
+  @include vp-767 {
+    width: 100%;
+    min-width: 270px;
     margin-bottom: 15px;
     margin-right: 0;
   }
@@ -150,11 +144,12 @@
   display: flex;
   color: #ffffff;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-top: 10px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
+    width: 100%;
     margin-bottom: 88px;
     margin-left: 5px;
   }
@@ -165,6 +160,12 @@
   font-size: 14px;
   line-height: 16px;
   max-width: 234px;
+
+  @include vp-767 {
+    margin-top: 5px;
+    max-width: none;
+    width: 100%;
+  }
 }
 
 input[type="checkbox"]+.control-mark {

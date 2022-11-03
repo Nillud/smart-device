@@ -106,7 +106,7 @@
         <section class="about-company">
           <picture>
             <source type="image/webp" srcset="img/about-company-year.webp 1x, img/about-company-year@2x.webp 2x">
-            <img src="img/about-company-year.png" srcset="" alt="2022" width="150" height="320">
+            <img src="img/about-company-year.png 1x" srcset="img/about-company-year@2x.png 2x" alt="2022" width="150" height="320">
           </picture>
           <div class="about-company__text">
             <h2 class="about-company__header">О компании</h2>
@@ -156,27 +156,29 @@
           </ul>
         </section>
         <section class="questions" data-questions>
-          <picture>
-            <source type="image/webp" srcset="img/feedback-airplane.webp 1x, img/feedback-airplane@2x.png 2x">
-            <img src="img/feedback-airplane.png" alt="блок с вопросами." width="510" height="285">
-          </picture>
-          <form class="questions__form form" action="https://echo.htmlacademy.ru" method="get">
-            <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
-            <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
-            <div class="form__contacts">
-              <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" required></label>
-              <label class="form__field"><input type="tel" name="phone" id="phone" placeholder="Телефон" data-phone required></label>
-            </div>
-            <textarea class="form__field" name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-            <div class="form__confirm">
-              <button class="form__button" type="submit">Задать вопрос</button>
-              <label class="form__checkbox form__field">
-                <input class="visually-hidden" type="checkbox" name="personal-data" id="personal-data" checked required>
-                <span class="control-mark"></span>
-                <span class="form__text">Я согласен на обработку  персональных данных</span>
-              </label>
-            </div>
-          </form>
+          <div class="questions__wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/feedback-airplane.webp 1x, img/feedback-airplane@2x.png 2x">
+              <img src="img/feedback-airplane.png 1x" srcset="img/feedback-airplane@2x.png 2x" alt="блок с вопросами." width="510" height="285">
+            </picture>
+            <form class="questions__form form" action="https://echo.htmlacademy.ru" method="get">
+              <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
+              <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
+              <div class="form__contacts">
+                <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" required></label>
+                <label class="form__field"><input type="tel" name="phone" id="phone" placeholder="Телефон" data-phone required></label>
+              </div>
+              <textarea class="form__field" name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+              <div class="form__confirm">
+                <button class="form__button" type="submit">Задать вопрос</button>
+                <label class="form__checkbox form__field">
+                  <input class="visually-hidden" type="checkbox" name="personal-data" id="personal-data" checked required>
+                  <span class="control-mark"></span>
+                  <span class="form__text">Я согласен на обработку  персональных данных</span>
+                </label>
+              </div>
+            </form>
+          </div>
         </section>
       </main>
       <footer>
@@ -186,7 +188,7 @@
               <img class="footer-social__logo-image" src="img/logo.svg" alt="логотип." width="55" height="55">
               <picture>
                 <source type="image/webp" srcset="img/logo-text.webp 1x, img/logo-text@2x.webp 2x">
-                <img class="footer-social__logo-text" src="img/logo-text.png" alt="логотип smart deivce." width="145" height="45">
+                <img class="footer-social__logo-text" src="img/logo-text.png 1x" srcset="img/logo-text@2x.png 2x" alt="логотип smart deivce." width="145" height="45">
               </picture>
             </a>
             <ul class="footer-social__list">

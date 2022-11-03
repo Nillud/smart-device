@@ -1,44 +1,48 @@
 .site-sections {
-  @media (max-width: 1279px) {
+  width: 25%;
+  height: 60%;
+  margin-left: 160px;
+
+  @include vp-1023 {
     max-width: 220px;
     margin-left: 50px;
     margin-right: 105px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     max-width: none;
     margin: 0;
   }
 }
 
 .site-sections ul {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  min-width: 470px;
-  max-height: 150px;
+  width: 100%;
+  height: 60%;
   margin-right: 30px;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     max-height: none;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     max-width: none;
   }
 }
 
 .site-sections li {
   display: block;
-  width: 220px;
+  width: 46%;
   height: auto;
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     width: none;
   }
 }
 
 .site-sections a {
   display: block;
-  width: 220px;
+  min-width: 220px;
   height: auto;
 }

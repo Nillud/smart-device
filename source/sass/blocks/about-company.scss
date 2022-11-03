@@ -1,13 +1,13 @@
 .about-company {
   display: flex;
   margin: 0 auto;
-  max-width: 1220px;
+  width: 64%;
 
-  @media (max-width: 1279px) {
-    max-width: 678px;
+  @include vp-1023 {
+    width: 87%;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     padding: 25px;
   }
 }
@@ -18,22 +18,22 @@
   margin-right: 100px;
   margin-bottom: 100px;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-top: 14px;
     margin-right: 29px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     display: none;
   }
 }
 
 .about-company__text {
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     max-width: 495px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin: 0 auto;
   }
 }
@@ -49,12 +49,12 @@
   letter-spacing: -2px;
   color: #041827;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     max-width: 495px;
     margin-bottom: 12px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     font-size: 28px;
     line-height: 39px;
     letter-spacing: -1.5px;
@@ -71,18 +71,18 @@
   line-height: 22px;
   color: #041827;
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-bottom: 18px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
   }
 }
 
 .about-company__description-mobile span {
-  @media (max-width: 767px) {
+  @include vp-767 {
     display: none;
 
     &.is-active {
@@ -120,18 +120,18 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover {
+  @include hover-focus {
     opacity: 0.6  ;
   }
 
-  @media (max-width: 1279px) {
+  @include vp-1023 {
     margin-bottom: 79px;
     margin-top: 0;
     padding-top: 11px;
     letter-spacing: -1px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     margin-bottom: 55px;
     padding-top: 8px;
     padding-bottom: 8px;
