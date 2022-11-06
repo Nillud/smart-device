@@ -165,12 +165,12 @@
               <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
               <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
               <div class="form__contacts">
-                <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" required></label>
-                <label class="form__field"><input type="tel" name="phone" id="phone" placeholder="Телефон" data-phone required></label>
+                <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" required data-name></label>
+                <label class="form__field"><input type="tel" name="phone" id="phone" placeholder="Телефон" minlength="11" data-pristine-required-message="Обязательное поле" data-pristine-minlength-message="Введите 10 цифр номера без +7" data-phone required></label>
               </div>
               <textarea class="form__field" name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
               <div class="form__confirm">
-                <button class="form__button" type="submit">Задать вопрос</button>
+                <button class="form__button" type="submit" data-form-submit>Задать вопрос</button>
                 <label class="form__checkbox form__field">
                   <input class="visually-hidden" type="checkbox" name="personal-data" id="personal-data" checked required>
                   <span class="control-mark"></span>
@@ -241,6 +241,8 @@
                   Монтаж печатных плат
                 </a>
               </li>
+            </ul>
+            <ul class="footer-nav__list">
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav__link">
                   Комплектующие
@@ -304,11 +306,11 @@
           <p class="modal__description">
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
-          <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="get">
-            <label><input class="modal__input" type="text" name="call-name" id="call-name" placeholder="Имя" required></label>
-            <label><input class="modal__input" type="tel" name="call-phone" id="call-phone" placeholder="Телефон" data-phone-modal required></label>
+          <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="get" data-form>
+            <label><input class="modal__input" type="text" name="call-name" id="call-name" placeholder="Имя" data-name-modal required></label>
+            <label><input class="modal__input" type="tel" name="call-phone" id="call-phone" placeholder="Телефон" minlength="11" data-phone-modal required></label>
             <textarea name="call-question" id="call-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-            <button class="modal__submit-button" type="submit">Отправить</button>
+            <button class="modal__submit-button" type="submit" data-submit>Отправить</button>
             <label class="modal__checkbox">
               <input class="visually-hidden" type="checkbox" name="call-personal-data" id="call-personal-data" required>
               <span class="control-mark"></span>
@@ -321,6 +323,7 @@
 
     <script src="https://unpkg.com/imask"></script>
     <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="pristine/pristine.min.js"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>

@@ -188,6 +188,7 @@
 .products-n-service a {
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   @include hover-focus {
     opacity: 0.6;

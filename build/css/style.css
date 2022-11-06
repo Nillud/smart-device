@@ -938,6 +938,7 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: 1000;
 }
 
 .main-nav a {
@@ -982,14 +983,20 @@ button,
 }
 
 .main-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (225px)[2];
+  grid-template-columns: repeat(2, 225px);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  row-gap: 10px;
   list-style-type: none;
   margin: 0;
+  margin-top: 45px;
+  margin-bottom: 51px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -1019,11 +1026,8 @@ button,
   padding: 10px 15px;
   min-width: 160px;
   height: 40px;
-  margin-top: -10px;
+  margin-top: 35px;
   margin-right: auto;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
   background: none;
   border: 1px solid #F2F5F7;
   border-radius: 3px;
@@ -1343,6 +1347,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .products-n-service a.focus-visible:focus {
@@ -1469,7 +1474,7 @@ button,
 }
 
 .form__contacts input {
-  padding: 15px 0 15px 15px;
+  padding: 15px;
   margin-bottom: 20px;
   width: 98%;
   min-width: 275px;
@@ -1481,23 +1486,27 @@ button,
 }
 
 .form__contacts input::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form__contacts input::-moz-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form__contacts input:-ms-input-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form__contacts input::-ms-input-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form__contacts input::placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
+}
+
+.form__contacts input.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .form textarea {
@@ -1507,6 +1516,7 @@ button,
   padding: 0;
   padding-top: 25px;
   padding-left: 15px;
+  padding-right: 15px;
   background: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -1514,23 +1524,27 @@ button,
 }
 
 .form textarea::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form textarea::-moz-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form textarea:-ms-input-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form textarea::-ms-input-placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
 }
 
 .form textarea::placeholder {
-  color: #ffffff;
+  color: #E5E5E5;
+}
+
+.form textarea.focus-visible:focus {
+  opacity: 0.6;
 }
 
 .form__confirm {
@@ -1576,6 +1590,10 @@ button,
   color: #ffffff;
 }
 
+.form__confirm label.focus-visible:focus {
+  opacity: 0.6;
+}
+
 .form__text {
   opacity: 0.8;
   font-size: 14px;
@@ -1591,6 +1609,11 @@ input[type=checkbox] + .control-mark {
   height: 15px;
   border: 1px solid #FFFFFF;
   border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type=checkbox] + .control-mark.focus-visible:focus {
+  opacity: 0.6;
 }
 
 input[type=checkbox]:focus + .control-mark {
@@ -1664,6 +1687,7 @@ input[type=checkbox]:checked + .control-mark::after {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 100%;
 }
 
 .footer-nav__section a {
@@ -1732,17 +1756,17 @@ input[type=checkbox]:checked + .control-mark::after {
 
 .footer-social ul {
   margin-left: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (40px)[3];
+  grid-template-columns: repeat(3, 40px);
+  -ms-grid-rows: 40px;
+  grid-template-rows: 40px;
+  gap: 15px;
 }
 
-.footer-social li:not(:last-child) {
-  margin-right: 15px;
+.footer-social li {
+  margin: 0;
 }
 
 .footer-social__item a {
@@ -1768,19 +1792,23 @@ input[type=checkbox]:checked + .control-mark::after {
 }
 
 .site-sections {
-  width: 25%;
-  height: 60%;
-  margin-left: 160px;
-}
-
-.site-sections ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 100%;
+  width: 27%;
+  height: 60%;
+  margin-left: 160px;
+}
+
+.site-sections ul {
+  width: 46%;
+  max-width: 220px;
   height: 60%;
   margin-right: 30px;
 }
@@ -1849,12 +1877,6 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 */
 
-@media (min-width: 1280px) {
-  .main-nav li:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 @media (max-width: 1439px) {
   .container {
     padding: 0 32px;
@@ -1880,12 +1902,17 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 
   .main-nav ul {
+    -ms-grid-columns: (40px)[2];
+    grid-template-columns: repeat(2, 40px);
+    -ms-grid-rows: 40px;
+    grid-template-rows: 40px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
     margin: 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
     margin-right: 50px;
-  }
-
-  .main-nav li {
-    margin-right: 20px;
   }
 
   .main-nav__contacts {
@@ -2155,10 +2182,6 @@ input[type=checkbox]:checked + .control-mark::after {
     flex-direction: row;
     margin-top: 8px;
     margin-right: 45px;
-  }
-
-  .footer-social li:last-child {
-    margin-right: 0;
   }
 
   .site-sections {
@@ -2458,7 +2481,6 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 
   .form__text {
-    margin-top: 5px;
     max-width: none;
     width: 100%;
   }
@@ -2563,10 +2585,6 @@ input[type=checkbox]:checked + .control-mark::after {
     margin-top: 15px;
   }
 
-  .footer-social li:last-child {
-    margin-right: 0;
-  }
-
   .site-sections {
     max-width: none;
     margin: 0;
@@ -2660,7 +2678,23 @@ input[type=checkbox]:checked + .control-mark::after {
     opacity: 0.6;
   }
 
+  .form__contacts input:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .form textarea:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
   .form__confirm button:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .form__confirm label:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  input[type=checkbox] + .control-mark:hover:not(.focus-visible) {
     opacity: 0.6;
   }
 

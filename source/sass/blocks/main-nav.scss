@@ -8,6 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: 1000;
 
   @include vp-1023 {
     min-height: 100px;
@@ -30,7 +31,6 @@
   align-items: center;
   margin-left: auto;
   margin-top: 30px;
-  // margin-right: 160px;
 
   &:focus {
     outline: 1px #ffffff solid;
@@ -69,34 +69,32 @@
 }
 
 .main-nav ul {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 225px);
+  grid-template-rows: auto;
+  column-gap: 30px;
+  row-gap: 10px;
   list-style-type: none;
   margin: 0;
+  margin-top: 45px;
+  margin-bottom: 51px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
 
   @include vp-1023 {
+    grid-template-columns: repeat(2, 40px);
+    grid-template-rows: 40px;
+    column-gap: 20px;
     margin: 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
     margin-right: 50px;
   }
 
   @include vp-767 {
     height: 60px;
     margin-right: 15px;
-  }
-}
-
-.main-nav li {
-  @media (min-width: 1280px) {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-
-  @include vp-1023 {
-    margin-right: 20px;
   }
 }
 
@@ -135,9 +133,8 @@
   padding: 10px 15px;
   min-width: 160px;
   height: 40px;
-  margin-top: -10px;
+  margin-top: 35px;
   margin-right: auto;
-  align-self: center;
   background: none;
   border: 1px solid #F2F5F7;
   border-radius: 3px;

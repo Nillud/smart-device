@@ -4,33 +4,94 @@ import IMask from 'imask';
 
 // ---------------------------------
 
+const pageBody = document.querySelector('[data-body]');
+const buttonRequest = document.querySelector('[data-request-button]');
+const modalRequest = document.querySelector('[data-modal]');
+const buttonClose = document.querySelectorAll('[data-close-modal]');
+const scrollButton = document.querySelector('[data-scroll-button]');
+const questionsBlock = document.querySelector('[data-questions]');
+
+const buttonMore = document.querySelector('[data-button-more]');
+const aboutDescription = document.querySelector('[data-description]');
+const aboutMobile = document.querySelector('[data-description-mobile');
+
+const accordeonSections = document.querySelector('[data-accordeon-sections]');
+const accordeonContacts = document.querySelector('[data-accordeon-contacts]');
+
+// const form = document.querySelector('[data-form]');
+const submitButton = document.querySelector('[data-submit]');
+const modalSubmitButton = document.querySelector('[data-form-submit]');
+
+const nameInput = document.querySelector('[data-name]');
+const nameInputModal = document.querySelector('[data-name-modal');
+const phoneInput = document.querySelector('[data-phone]');
+const phoneInputModal = document.querySelector('[data-phone-modal]');
+const maskOptions = {
+  mask: '+{7}(000)000 00 00',
+  lazy: false,
+};
+
+const focusableEls = modalRequest.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+const firstFocusableEl = focusableEls[0];
+const lastFocusableEl = focusableEls[focusableEls.length - 1];
+const KEYCODE_TAB = 9;
+
+// const pristine = new Pristine(form, {
+//   classTo: 'form__field',
+//   errorTextParent: 'form__field',
+//   errorClass: 'form--invalid',
+//   successClass: 'form--valid',
+//   errorTextTag: 'span',
+//   errorTextClass: 'form__error-text',
+// });
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
-  // ---------------------------------
-  const pageBody = document.querySelector('[data-body]');
-  const buttonRequest = document.querySelector('[data-request-button]');
-  const modalRequest = document.querySelector('[data-modal]');
-  const buttonClose = document.querySelectorAll('[data-close-modal]');
-  const scrollButton = document.querySelector('[data-scroll-button]');
-  const questionsBlock = document.querySelector('[data-questions]');
+  // --------------------------------
 
-  const buttonMore = document.querySelector('[data-button-more]');
-  const aboutDescription = document.querySelector('[data-description]');
-  const aboutMobile = document.querySelector('[data-description-mobile');
+  iosVhFix();
 
-  const accordeonSections = document.querySelector('[data-accordeon-sections]');
-  const accordeonContacts = document.querySelector('[data-accordeon-contacts]');
+  modalRequest.addEventListener('keydown', function (e) {
+    const isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
 
-  const phoneInput = document.querySelector('[data-phone]');
-  const phoneInputModal = document.querySelector('[data-phone-modal]');
-  const maskOptions = {
-    mask: '+{7}(000)000 00 00',
-    lazy: false,
-  };
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (e.shiftKey) {
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus();
+        e.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusableEl) {
+        firstFocusableEl.focus();
+        e.preventDefault();
+      }
+    }
+  });
 
   const phoneMask = new IMask(phoneInput, maskOptions);
   const phoneMaskModal = new IMask(phoneInputModal, maskOptions);
+
+  const setDataToStore = () => {
+    if (modalRequest.classList.contains('is-active')) {
+      localStorage.setItem('nameModal', nameInputModal);
+      localStorage.setItem('phoneModal', phoneInputModal);
+    } else {
+      localStorage.setItem('name', nameInput);
+      localStorage.setItem('phone', phoneInput);
+    }
+  };
+
+  submitButton.addEventListener('click', () => {
+    setDataToStore();
+  });
+
+  modalSubmitButton.addEventListener('click', () => {
+    setDataToStore();
+  });
 
   phoneInput.addEventListener('load', () => {
     phoneMask();
@@ -40,11 +101,11 @@ window.addEventListener('DOMContentLoaded', () => {
     phoneMaskModal();
   });
 
-  iosVhFix();
-
   buttonRequest.addEventListener('click', () => {
     if (modalRequest) {
       modalRequest.classList.add('is-active');
+
+      nameInputModal.focus();
 
       pageBody.addEventListener('keydown', (e) => {
         if (e.code === 'Escape') {
