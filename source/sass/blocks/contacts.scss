@@ -3,11 +3,12 @@
 }
 
 .contacts {
+  width: 17.97%;
   min-width: 180px;
 
   @include vp-1023 {
+    width: 41%;
     max-width: 320px;
-    margin-right: 50px;
   }
 
   @include vp-767 {
@@ -17,18 +18,20 @@
 }
 
 .contacts p {
+  margin-bottom: 21px;
+
   @include vp-767 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 }
 
 .contacts li {
   @include vp-1023 {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   @include vp-767 {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
     &:last-child {
       margin-bottom: 13px;

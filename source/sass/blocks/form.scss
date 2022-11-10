@@ -1,6 +1,6 @@
 .form {
-  width: 47.201%;
-  margin-left: -5px;
+  width: 47.9%;
+  margin-left: 5px;
   margin-bottom: 150px;
   margin-top: 165px;
   display: flex;
@@ -111,7 +111,7 @@
 
 .form__confirm button {
   box-sizing: border-box;
-  width: 45%;
+  width: 45.7%;
   min-width: 250px;
   height: 45px;
   padding: 15px 25px;
@@ -124,20 +124,26 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
   letter-spacing: 0.05em;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: unset;
+  }
 
   @include hover-focus {
     opacity: 0.6;
   }
 
   @include vp-1023 {
+    padding: 17px 25px 13px;
+    width: 39.55%;
     margin-right: 85px;
     margin-bottom: 125px;
-    font-size: 13.5px;
   }
 
   @include vp-767 {

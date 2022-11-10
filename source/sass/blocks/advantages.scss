@@ -1,12 +1,13 @@
 .advantages ul {
   margin: 0 auto;
-  margin-bottom: 120px;
+  margin-bottom: 90px;
   margin-top: 120px;
   padding: 0;
-  width: 64%;
+  width: 63.6%;
   min-width: 750px;
   min-height: 630px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style-type: none;
 
@@ -14,13 +15,13 @@
     width: 87%;
     min-width: 670px;
     margin-top: 80px;
-    margin-bottom: 75px;
+    margin-bottom: 45px;
   }
 
   @include vp-767 {
     flex-direction:  column;
     margin-top: 50px;
-    margin-bottom: 7px;
+    margin-bottom: 16px;
     min-width: 270px;
     width: 84%;
   }
@@ -29,14 +30,10 @@
 .advantages li {
   position: relative;
   box-sizing: border-box;
-  width: 48%;
+  width: 48.69%;
   padding: 40px 45px 35px;
   margin-bottom: 30px;
   border: 1px solid #EBEBEB;
-
-  &:not(:nth-child(2n)) {
-    margin-right: 30px;
-  }
 
   &::before {
     content: "";
@@ -54,27 +51,34 @@
   }
 
   @include vp-1023 {
-    width: 47%;
-    padding: 40px 30px 35px 45px;
+    width: 47.76%;
+    min-height: 360px;
+    padding: 40px 35px 30px 44px;
   }
 
   @include vp-767 {
     width: 100%;
-    min-height: 325px;
+    min-height: 340px;
     padding: 30px 30px 35px;
+
+    &:nth-child(3n),
+    &:nth-child(4n) {
+      min-height: 325px;
+    }
 
     &:not(:nth-child(2n)) {
       margin-right: 0;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 15px;
     }
   }
 }
 
 .advantages svg {
   @include vp-1023 {
+    width: 35px;
+    height: 35px;
+  }
+
+  @include vp-767 {
     width: 30px;
     height: 30px;
   }
@@ -88,11 +92,10 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  letter-spacing: -1.1px;
   color: #00B2FF;
 
   @include vp-1023 {
-    line-height: 31px;
+    margin-top: 8px;
   }
 
   @include vp-767 {
@@ -105,7 +108,7 @@
   display: block;
   min-height: 120px;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 14px;
   font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
   font-weight: 400;
@@ -114,8 +117,8 @@
   color: #041827;
 
   @include vp-1023 {
-    margin-top: 13px;
-    line-height: 21px;
+    margin-top: 8px;
+    line-height: 21.7px;
   }
 
   @include vp-767 {

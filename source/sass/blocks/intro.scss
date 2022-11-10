@@ -1,69 +1,94 @@
 .intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  background-image: url("../img/main-background.jpg");
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #041827;
 
   @include retina {
-    background-image: url("../img/main-background@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #041827;
   }
 
   @include vp-1023 {
-    background-image: url("../img/main-background.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #041827;
     margin-top: 67px;
 
-    background-image: url("../img/main-background@2x.jpg");
+    @include retina {
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #041827;
+    }
   }
 
   @include vp-767 {
     margin-top: 32px;
     padding: 0 25px;
-    background-image: url("../img/main-background.jpg");
-    background-position: -200px;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #041827;
 
-    background-image: url("../img/main-background@2x.jpg");
+    @include retina {
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #041827;
+    }
   }
 }
 
 .intro__block {
+  margin-bottom: 250px;
+
+  @include vp-1023 {
+    margin-bottom: 175px;
+  }
+
   @include vp-767 {
     margin: 0 auto;
+    margin-bottom: 160px;
   }
 }
 
 .intro h1 {
   min-width: 970px;
   margin: 0;
-  margin-bottom: 40px;
-  margin-top: 315px;
+  margin-bottom: 31px;
+  margin-top: 305px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 78px;
-  line-height: 75px;
-  letter-spacing: -2.5px;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #f2f5f7;
 
   @include vp-1023 {
     min-width: 670px;
-    margin-top: 113px;
+    margin-top: 148px;
     margin-bottom: 0;
-    font-size: 63px;
-    letter-spacing: -2.5px;
+    font-size: 64px;
+    line-height: 75px;
   }
 
   @include vp-767 {
     min-width: 270px;
     margin-top: 118px;
     margin-bottom: 8px;
-    font-size: 33px;
+    font-size: 36px;
     line-height: 42px;
-    letter-spacing: -0.1px;
   }
 }
 
@@ -95,7 +120,7 @@
 .intro__button {
   box-sizing: border-box;
   display: block;
-  margin-bottom: 280px;
+  margin-bottom: 30px;
   padding: 15px 25px;
   min-width: 410px;
   min-height: 55px;
@@ -107,7 +132,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: -1px;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   color: #f2f5f7;
@@ -123,13 +148,10 @@
 
   @include vp-1023 {
     margin-left: 45px;
-    margin-bottom: 205px;
-    letter-spacing: -1px;
   }
 
   @include vp-767 {
     margin-left: 0;
-    margin-bottom: 190px;
     font-size: 14px;
     line-height: 16px;
     min-width: 270px;

@@ -7,8 +7,8 @@
     <meta name="description" content="smart device.">
     <title>Smart Device</title>
     <link rel="preload" href="fonts/PT-Mono_Regular.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/roboto-condensed-v25-latin-regular.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/roboto-condensed-v25-latin-700.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body data-body>
@@ -16,11 +16,8 @@
       <header>
         <nav class="main-nav">
           <a class="main-nav__logo">
-            <img class="main-nav__logo-image" src="img/logo.svg" alt="логотип smart device" width="55" height="55">
-            <picture>
-              <source type="image/webp" srcset="img/logo-text.webp 1x, img/logo-text@2x.webp 2x">
-              <img class="main-nav__logo-text" src="img/logo-text.png" srcset="img/logo-text@2x.png" alt="логотип smart deivce." width="145" height="45">
-            </picture>
+            <img class="main-nav__logo-image" src="img/logo.svg" alt="логотип smart device." width="55" height="55">
+            <img class="main-nav__logo-text" src="img/logo-text.svg" alt="логотип описание." width="145" height="45">
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -40,7 +37,7 @@
               </a>
             </li>
           </ul>
-          <button class="main-nav__button" data-request-button>Заказать звонок</button>
+          <a class="main-nav__button button no-js" href="modal.html" data-open-modal="feedback" data-button data-request-button>Заказать звонок</a>
         </nav>
       </header>
       <main>
@@ -48,7 +45,7 @@
           <div class="intro__block">
             <h1 class="intro__header">Печатные платы</h1>
             <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <button class="intro__button" data-scroll-button>
+            <button class="intro__button button no-js" data-button data-scroll-button>
               <span>Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </button>
@@ -76,7 +73,7 @@
                 <path d="M17.9832 31.0987C17.8562 30.9716 17.6798 30.8984 17.5 30.8984C17.3202 30.8984 17.1438 30.9716 17.0167 31.0987C16.8896 31.2259 16.8164 31.4022 16.8164 31.582C16.8164 31.7618 16.8895 31.9382 17.0167 32.0653C17.1439 32.1925 17.3202 32.2656 17.5 32.2656C17.6798 32.2656 17.8562 32.1925 17.9832 32.0653C18.1104 31.9382 18.1836 31.7618 18.1836 31.582C18.1836 31.4022 18.1104 31.2259 17.9832 31.0987Z" fill="#00B2FF"/>
               </svg>
               <h3 class="advantages__item-header">Крупные поставщики</h3>
-              <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+              <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
             </li>
             <li class="advantages__item">
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,16 +108,16 @@
           <div class="about-company__text">
             <h2 class="about-company__header">О компании</h2>
             <p class="about-company__description">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p class="about-company__description-mobile">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span class="about-company__mobile" data-description-mobile>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-            <p class="about-company__description-more" data-description>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
+            <p class="about-company__description-mobile">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br><span class="about-company__mobile is-active" data-description-mobile>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            <p class="about-company__description-more is-active" data-description>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
               Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
-            <button class="about-company__button" data-button-more>Подробнее</button>
+            <button class="about-company__button button no-js" data-button data-button-more>Подробнее</button>
           </div>
         </section>
         <section class="products-n-service">
           <h2 class="products-n-service__header">
             <span>Smart Device предлагает следующие товары и услуги</span>
-            <span>Товары и услуги Smart Device</span>
+            <span>Товары и услуги<br>Smart Device</span>
           </h2>
           <ul class="products-n-service__list">
             <li class="products-n-service__item products-n-service__item--first-card">
@@ -135,7 +132,7 @@
             </li>
             <li class="products-n-service__item products-n-service__item--second-card">
               <a class="products-n-service__link" href="#">
-                <h3 class="products-n-service__item-header">Монтаж печатных<br>плат</h3>
+                <h3 class="products-n-service__item-header">Монтаж<br class="tablet"> печатных<br class="desktop"> плат</h3>
                 <span class="products-n-service__button">
                   <svg width="7" height="4">
                     <use xlink:href="img/sprite_auto.svg#arrow"/>
@@ -161,12 +158,12 @@
               <source type="image/webp" srcset="img/feedback-airplane.webp 1x, img/feedback-airplane@2x.png 2x">
               <img src="img/feedback-airplane.png 1x" srcset="img/feedback-airplane@2x.png 2x" alt="блок с вопросами." width="510" height="285">
             </picture>
-            <form class="questions__form form" action="https://echo.htmlacademy.ru" method="get">
+            <form class="questions__form form" action="https://echo.htmlacademy.ru" method="post">
               <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
               <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
               <div class="form__contacts">
-                <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" required data-name></label>
-                <label class="form__field"><input type="tel" name="phone" id="phone" placeholder="Телефон" minlength="11" data-pristine-required-message="Обязательное поле" data-pristine-minlength-message="Введите 10 цифр номера без +7" data-phone required></label>
+                <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" pattern="^[a-zA-ZА-Яа-яЁё]+$" minlength="1" maxlength="25" required data-name></label>
+                <label class="form__field"><input type="text" name="phone" id="phone" placeholder="Телефон" minlength="11" data-phone required></label>
               </div>
               <textarea class="form__field" name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
               <div class="form__confirm">
@@ -186,10 +183,7 @@
           <div class="footer-nav__section footer-social">
             <a class="footer-social__logo">
               <img class="footer-social__logo-image" src="img/logo.svg" alt="логотип." width="55" height="55">
-              <picture>
-                <source type="image/webp" srcset="img/logo-text.webp 1x, img/logo-text@2x.webp 2x">
-                <img class="footer-social__logo-text" src="img/logo-text.png 1x" srcset="img/logo-text@2x.png 2x" alt="логотип smart deivce." width="145" height="45">
-              </picture>
+              <img class="footer-social__logo-text" src="img/logo-text.svg" alt="логотип описание." width="145" height="45">
             </a>
             <ul class="footer-social__list">
               <li class="footer-social__item">
@@ -242,7 +236,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="footer-nav__list">
+            <ul class="footer-nav__list footer-nav__list--extra">
               <li class="footer-nav__item">
                 <a href="#" class="footer-nav__link">
                   Комплектующие
@@ -306,11 +300,11 @@
           <p class="modal__description">
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
-          <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="get" data-form>
-            <label><input class="modal__input" type="text" name="call-name" id="call-name" placeholder="Имя" data-name-modal required></label>
-            <label><input class="modal__input" type="tel" name="call-phone" id="call-phone" placeholder="Телефон" minlength="11" data-phone-modal required></label>
+          <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="post" data-form>
+            <label><input class="modal__input" type="text" name="call-name" id="call-name" placeholder="Имя" pattern="^[a-zA-ZА-Яа-яЁё]+$" minlength="1" maxlength="25" required data-name-modal data-focus></label>
+            <label><input class="modal__input" type="text" name="call-phone" id="call-phone" placeholder="Телефон" minlength="11" data-phone-modal required></label>
             <textarea name="call-question" id="call-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-            <button class="modal__submit-button" type="submit" data-submit>Отправить</button>
+            <button class="modal__submit-button" type="submit" data-modal-submit>Отправить</button>
             <label class="modal__checkbox">
               <input class="visually-hidden" type="checkbox" name="call-personal-data" id="call-personal-data" required>
               <span class="control-mark"></span>
@@ -321,9 +315,7 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/imask"></script>
     <script src="js/vendor.min.js"></script>
-    <script src="pristine/pristine.min.js"></script>
     <script src="js/main.min.js" type="module"></script>
   </body>
 </html>

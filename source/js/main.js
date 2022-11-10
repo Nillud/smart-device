@@ -1,13 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import IMask from 'imask';
+import {addMask} from './mask';
 
 // ---------------------------------
+const buttonNoJs = document.querySelectorAll('[data-button]');
 
-const pageBody = document.querySelector('[data-body]');
-const buttonRequest = document.querySelector('[data-request-button]');
+const requestButton = document.querySelector('[data-request-button]');
 const modalRequest = document.querySelector('[data-modal]');
-const buttonClose = document.querySelectorAll('[data-close-modal]');
 const scrollButton = document.querySelector('[data-scroll-button]');
 const questionsBlock = document.querySelector('[data-questions]');
 
@@ -19,31 +18,13 @@ const accordeonSections = document.querySelector('[data-accordeon-sections]');
 const accordeonContacts = document.querySelector('[data-accordeon-contacts]');
 
 // const form = document.querySelector('[data-form]');
-const submitButton = document.querySelector('[data-submit]');
-const modalSubmitButton = document.querySelector('[data-form-submit]');
+const submitButton = document.querySelector('[data-form-submit]');
+const modalSubmitButton = document.querySelector('[data-modal-submit]');
 
 const nameInput = document.querySelector('[data-name]');
 const nameInputModal = document.querySelector('[data-name-modal');
 const phoneInput = document.querySelector('[data-phone]');
 const phoneInputModal = document.querySelector('[data-phone-modal]');
-const maskOptions = {
-  mask: '+{7}(000)000 00 00',
-  lazy: false,
-};
-
-const focusableEls = modalRequest.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
-const firstFocusableEl = focusableEls[0];
-const lastFocusableEl = focusableEls[focusableEls.length - 1];
-const KEYCODE_TAB = 9;
-
-// const pristine = new Pristine(form, {
-//   classTo: 'form__field',
-//   errorTextParent: 'form__field',
-//   errorClass: 'form--invalid',
-//   successClass: 'form--valid',
-//   errorTextTag: 'span',
-//   errorTextClass: 'form__error-text',
-// });
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -52,28 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  modalRequest.addEventListener('keydown', function (e) {
-    const isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+  requestButton.href = '#';
 
-    if (!isTabPressed) {
-      return;
-    }
-
-    if (e.shiftKey) {
-      if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus();
-        e.preventDefault();
-      }
-    } else {
-      if (document.activeElement === lastFocusableEl) {
-        firstFocusableEl.focus();
-        e.preventDefault();
-      }
-    }
+  buttonNoJs.forEach((button) => {
+    button.classList.remove('no-js');
   });
 
-  const phoneMask = new IMask(phoneInput, maskOptions);
-  const phoneMaskModal = new IMask(phoneInputModal, maskOptions);
+  aboutDescription.classList.remove('is-active');
+  aboutMobile.classList.remove('is-active');
 
   const setDataToStore = () => {
     if (modalRequest.classList.contains('is-active')) {
@@ -85,42 +52,30 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  phoneInput.addEventListener('input', () => {
+    addMask(phoneInput);
+  });
+
+  phoneInput.addEventListener('change', () => {
+    if (phoneInput.value.length <= 10) {
+      phoneInput.style.backgroundColor = 'rgba(227, 38, 54, 0.8)';
+      submitButton.disabled = true;
+    } else {
+      phoneInput.style.background = 'rgba(4,20,39,.15)';
+      submitButton.disabled = false;
+    }
+  });
+
+  phoneInputModal.addEventListener('input', () => {
+    addMask(phoneInputModal);
+  });
+
   submitButton.addEventListener('click', () => {
     setDataToStore();
   });
 
   modalSubmitButton.addEventListener('click', () => {
     setDataToStore();
-  });
-
-  phoneInput.addEventListener('load', () => {
-    phoneMask();
-  });
-
-  phoneInputModal.addEventListener('load', () => {
-    phoneMaskModal();
-  });
-
-  buttonRequest.addEventListener('click', () => {
-    if (modalRequest) {
-      modalRequest.classList.add('is-active');
-
-      nameInputModal.focus();
-
-      pageBody.addEventListener('keydown', (e) => {
-        if (e.code === 'Escape') {
-          modalRequest.classList.remove('is-active');
-        }
-      });
-    }
-  });
-
-  buttonClose.forEach((button) => {
-    button.addEventListener('click', () => {
-      if (modalRequest) {
-        modalRequest.classList.remove('is-active');
-      }
-    });
   });
 
   scrollButton.addEventListener('click', () => {
