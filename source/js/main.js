@@ -24,6 +24,17 @@ const nameInputModal = document.querySelector('[data-name-modal');
 const phoneInput = document.querySelector('[data-phone]');
 const phoneInputModal = document.querySelector('[data-phone-modal]');
 
+const pageLoad = () => {
+  requestButton.href = '#';
+
+  buttonNoJs.forEach((button) => {
+    button.classList.remove('no-js');
+  });
+
+  aboutDescription.classList.remove('is-active');
+  aboutMobile.classList.remove('is-active');
+};
+
 const closeAccordeons = () => {
   accordeonFields.forEach((field) => {
     field.classList.remove('is-active');
@@ -41,6 +52,16 @@ const openAccordeon = (field) => {
   }
 };
 
+const validatePhone = () => {
+  if (phoneInput.value.length <= 10) {
+    phoneInput.style.backgroundColor = 'rgba(227, 38, 54, 0.8)';
+    submitButton.disabled = true;
+  } else {
+    phoneInput.style.background = 'rgba(4,20,39,.15)';
+    submitButton.disabled = false;
+  }
+};
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
@@ -48,14 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  requestButton.href = '#';
-
-  buttonNoJs.forEach((button) => {
-    button.classList.remove('no-js');
-  });
-
-  aboutDescription.classList.remove('is-active');
-  aboutMobile.classList.remove('is-active');
+  pageLoad();
 
   const setDataToStore = () => {
     if (modalRequest.classList.contains('is-active')) {
@@ -72,13 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   phoneInput.addEventListener('change', () => {
-    if (phoneInput.value.length <= 10) {
-      phoneInput.style.backgroundColor = 'rgba(227, 38, 54, 0.8)';
-      submitButton.disabled = true;
-    } else {
-      phoneInput.style.background = 'rgba(4,20,39,.15)';
-      submitButton.disabled = false;
-    }
+    validatePhone();
   });
 
   phoneInputModal.addEventListener('input', () => {
