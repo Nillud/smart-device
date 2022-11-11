@@ -14,10 +14,8 @@ const buttonMore = document.querySelector('[data-button-more]');
 const aboutDescription = document.querySelector('[data-description]');
 const aboutMobile = document.querySelector('[data-description-mobile');
 
-const accordeonSections = document.querySelector('[data-accordeon-sections]');
-const accordeonContacts = document.querySelector('[data-accordeon-contacts]');
+const accordeonFields = document.querySelectorAll('[data-accordeon-field]');
 
-// const form = document.querySelector('[data-form]');
 const submitButton = document.querySelector('[data-form-submit]');
 const modalSubmitButton = document.querySelector('[data-modal-submit]');
 
@@ -25,6 +23,23 @@ const nameInput = document.querySelector('[data-name]');
 const nameInputModal = document.querySelector('[data-name-modal');
 const phoneInput = document.querySelector('[data-phone]');
 const phoneInputModal = document.querySelector('[data-phone-modal]');
+
+const closeAccordeons = () => {
+  accordeonFields.forEach((field) => {
+    field.classList.remove('is-active');
+    field.classList.add('inactive');
+  });
+};
+
+const openAccordeon = (field) => {
+  if (field.classList.contains('inactive')) {
+    field.classList.remove('inactive');
+    field.classList.add('is-active');
+  } else {
+    field.classList.remove('is-active');
+    field.classList.add('inactive');
+  }
+};
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -107,46 +122,19 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  if (accordeonSections) {
-    accordeonSections.classList.remove('nojs');
-    accordeonSections.classList.add('inactive');
+  accordeonFields.forEach((field) => {
+    field.classList.remove('nojs');
+    field.classList.add('inactive');
 
-    accordeonSections.addEventListener('click', () => {
-      if (accordeonContacts.classList.contains('is-active')) {
-        accordeonContacts.classList.remove('is-active');
-        accordeonContacts.classList.add('inactive');
-      }
-
-      if (accordeonSections.classList.contains('inactive')) {
-        accordeonSections.classList.remove('inactive');
-        accordeonSections.classList.add('is-active');
+    field.addEventListener('click', () => {
+      if (field.classList.contains('is-active')) {
+        openAccordeon(field);
       } else {
-        accordeonSections.classList.remove('is-active');
-        accordeonSections.classList.add('inactive');
+        closeAccordeons();
+        openAccordeon(field);
       }
     });
-  }
-
-  if (accordeonContacts) {
-    accordeonContacts.classList.remove('nojs');
-    accordeonContacts.classList.add('inactive');
-
-    accordeonContacts.addEventListener('click', () => {
-      if (accordeonSections.classList.contains('is-active')) {
-        accordeonSections.classList.remove('is-active');
-        accordeonSections.classList.add('inactive');
-      }
-
-      if (accordeonContacts.classList.contains('inactive')) {
-        accordeonContacts.classList.remove('inactive');
-        accordeonContacts.classList.add('is-active');
-      } else {
-        accordeonContacts.classList.remove('is-active');
-        accordeonContacts.classList.add('inactive');
-      }
-    });
-  }
-
+  });
 
   // Modules
   // ---------------------------------
