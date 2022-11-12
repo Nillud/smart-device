@@ -1075,9 +1075,9 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background.webp"), url("../img/background/background.jpg");
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background.webp"), url("../img/background/background.jpg");
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background.webp"), url("../img/background/background.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background.jpg");
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #041827;
@@ -1139,12 +1139,12 @@ button,
   cursor: pointer;
 }
 
-.intro__button span:last-child {
-  display: none;
-}
-
 .intro__button.focus-visible:focus {
   opacity: 0.6;
+}
+
+.intro__button span:last-child {
+  display: none;
 }
 
 .advantages ul {
@@ -1502,11 +1502,14 @@ button,
   margin-bottom: 0;
 }
 
+.form__contacts label {
+  width: 47.41%;
+}
+
 .form__contacts input {
   padding: 15px;
   margin-bottom: 20px;
-  width: 98%;
-  min-width: 275px;
+  width: 100%;
   height: 50px;
   background: rgba(4, 20, 39, 0.15);
   border: none;
@@ -1541,7 +1544,7 @@ button,
 .form textarea {
   width: 100%;
   height: 155px;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   padding: 0;
   padding-top: 25px;
   padding-left: 15px;
@@ -1982,9 +1985,9 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-tablet.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-tablet.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -1997,7 +2000,7 @@ input[type=checkbox]:checked + .control-mark::after {
 
   .intro h1 {
     min-width: 670px;
-    margin-top: 148px;
+    margin-top: 113px;
     margin-bottom: 0;
     font-size: 64px;
     line-height: 75px;
@@ -2157,9 +2160,8 @@ input[type=checkbox]:checked + .control-mark::after {
     margin-bottom: 0;
   }
 
-  .form__contacts input {
-    width: 48%;
-    min-width: 320px;
+  .form__contacts label {
+    width: 47.76%;
   }
 
   .form textarea {
@@ -2260,9 +2262,9 @@ input[type=checkbox]:checked + .control-mark::after {
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-tablet@2x.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-tablet@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-tablet@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2327,9 +2329,9 @@ input[type=checkbox]:checked + .control-mark::after {
   .intro {
     margin-top: 32px;
     padding: 0 25px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-mobile.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2529,13 +2531,12 @@ input[type=checkbox]:checked + .control-mark::after {
     margin-bottom: 0;
   }
 
-  .form__contacts input {
+  .form__contacts label {
     width: 100%;
-    min-width: 270px;
   }
 
   .form textarea {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     padding-top: 25px;
     height: 180px;
   }
@@ -2701,9 +2702,9 @@ input[type=checkbox]:checked + .control-mark::after {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-mobile@2x.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2805,9 +2806,9 @@ input[type=checkbox]:checked + .control-mark::after {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background@2x.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;

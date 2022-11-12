@@ -43,10 +43,6 @@
   &--modal {
     margin-left: 0;
     margin-bottom: 10px;
-
-    & path {
-      fill: #ffffff;
-    }
   }
 
   @include vp-1023 {
@@ -63,6 +59,10 @@
     margin-top: 15px;
     margin-left: 26px;
   }
+}
+
+.main-nav__logo--modal path {
+  fill: #ffffff;
 }
 
 .main-nav__logo-image {
@@ -122,24 +122,26 @@
   min-height: 20px;
   align-items: center;
 
-  & svg {
-    margin-right: 15px;
-  }
-
   @include vp-1023 {
     min-width: 40px;
     min-height: 40px;
+  }
+}
 
-    & svg {
-      width: 40px;
-      height: 40px;
-      margin-right: 0;
-      padding: 10px;
-    }
+.main-nav__contacts svg {
+  margin-right: 15px;
 
-    & span {
-      display: none;
-    }
+  @include vp-1023 {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    padding: 10px;
+  }
+}
+
+.main-nav__contacts span {
+  @include vp-1023 {
+    display: none;
   }
 }
 

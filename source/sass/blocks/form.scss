@@ -36,11 +36,22 @@
   }
 }
 
+.form__contacts label {
+  width: 47.41%;
+
+  @include vp-1023 {
+    width: 47.76%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
 .form__contacts input {
   padding: 15px;
   margin-bottom: 20px;
-  width: 98%;
-  min-width: 275px;
+  width: 100%;
   height: 50px;
   background: rgba(4, 20, 39, 0.15);
   border: none;
@@ -54,22 +65,12 @@
   @include hover-focus {
     opacity: 0.6;
   }
-
-  @include vp-1023 {
-    width: 48%;
-    min-width: 320px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-    min-width: 270px;
-  }
 }
 
 .form textarea {
   width: 100%;
   height: 155px;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   padding: 0;
   padding-top: 25px;
   padding-left: 15px;
@@ -94,7 +95,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     padding-top: 25px;
     height: 180px;
   }

@@ -36,17 +36,17 @@
   }
 }
 
-.products-n-service__header {
-  & span:last-child {
+.products-n-service__header span {
+  &:last-child {
     display: none;
   }
 
   @include vp-767 {
-    & span:first-child {
+    &:first-child {
       display: none;
     }
 
-    & span:last-child {
+    &:last-child {
       display: block;
     }
   }

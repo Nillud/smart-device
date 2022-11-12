@@ -91,10 +91,8 @@
   }
 }
 
-.about-company__description-more {
-  & p {
-    display: none;
-  }
+.about-company__description-more p {
+  display: none;
 }
 
 .about-company__description-more.is-active p {
