@@ -4,27 +4,31 @@
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+  (url("../../img/background/background.webp"), url("../img/background/background.jpg"));
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #041827;
 
   @include retina {
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    (url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg"));
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
   }
 
   @include vp-1023 {
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    (url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg"));
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
     margin-top: 67px;
 
     @include retina {
-      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      (url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg"));
       background-repeat: no-repeat;
       background-size: cover;
       background-color: #041827;
@@ -34,13 +38,15 @@
   @include vp-767 {
     margin-top: 32px;
     padding: 0 25px;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    (url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg"));
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
 
     @include retina {
-      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile@2x.jpg");
+      background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      (url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg"));
       background-repeat: no-repeat;
       background-size: cover;
       background-color: #041827;

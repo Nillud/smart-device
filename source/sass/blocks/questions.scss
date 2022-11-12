@@ -1,7 +1,7 @@
 .questions {
   display: flex;
   justify-content: center;
-  background: url("../img/feedback-background.png") no-repeat 0 -78px;
+  background: url("../img/feedback-background.svg") no-repeat 0 -78px;
   background-color: #00b3ff;
 
   @include vp-1023 {

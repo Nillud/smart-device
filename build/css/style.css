@@ -869,6 +869,10 @@ button,
   color: #ffffff;
 }
 
+.modal__submit-button:disabled {
+  opacity: 0.6;
+}
+
 .modal__checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1071,9 +1075,9 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background.jpg");
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background.webp"), url("../img/background/background.jpg");
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background.webp"), url("../img/background/background.jpg");
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background.webp"), url("../img/background/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #041827;
@@ -1144,9 +1148,7 @@ button,
 }
 
 .advantages ul {
-  margin: 0 auto;
-  margin-bottom: 90px;
-  margin-top: 120px;
+  margin: 120px auto 90px;
   padding: 0;
   width: 63.6%;
   min-width: 750px;
@@ -1188,7 +1190,7 @@ button,
 }
 
 .advantages h3 {
-  margin: 0;
+  margin-bottom: 0;
   margin-top: 13px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
@@ -1211,7 +1213,11 @@ button,
   color: #041827;
 }
 
-.advantages__item.focus-visible:focus path {
+.advantages__item svg {
+  fill: #00B2FF;
+}
+
+.advantages__item.focus-visible:focus svg {
   fill: #f2f5f7;
 }
 
@@ -1260,11 +1266,11 @@ button,
   color: #041827;
 }
 
-.about-company__description-more {
+.about-company__description-more p {
   display: none;
 }
 
-.about-company__description-more.is-active {
+.about-company__description-more.is-active p {
   display: block;
 }
 
@@ -1416,7 +1422,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: url("../img/feedback-background.png") no-repeat 0 -78px;
+  background: url("../img/feedback-background.svg") no-repeat 0 -78px;
   background-color: #00b3ff;
 }
 
@@ -1473,7 +1479,7 @@ button,
   flex-direction: column;
 }
 
-.form__field {
+.form label {
   font-family: "PT Mono", Courier, monospace;
   font-style: normal;
   font-weight: 400;
@@ -1976,9 +1982,9 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet.webp"), url("../img/background/background-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2254,9 +2260,9 @@ input[type=checkbox]:checked + .control-mark::after {
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background@2x.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-tablet@2x.webp"), url("../img/background/background-tablet@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2321,9 +2327,9 @@ input[type=checkbox]:checked + .control-mark::after {
   .intro {
     margin-top: 32px;
     padding: 0 25px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-mobile.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile.webp"), url("../img/background/background-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2433,7 +2439,7 @@ input[type=checkbox]:checked + .control-mark::after {
     display: none;
   }
 
-  .about-company__description-mobile span.is-active {
+  .about-company__description-mobile.is-active span {
     display: block;
   }
 
@@ -2695,9 +2701,9 @@ input[type=checkbox]:checked + .control-mark::after {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-mobile@2x.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile@2x.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile@2x.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background-mobile@2x.webp"), url("../img/background/background-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
@@ -2744,7 +2750,7 @@ input[type=checkbox]:checked + .control-mark::after {
     color: #f2f5f6;
   }
 
-  .advantages__item:hover:not(.focus-visible) path {
+  .advantages__item:hover:not(.focus-visible) svg {
     fill: #f2f5f7;
   }
 
@@ -2799,9 +2805,9 @@ input[type=checkbox]:checked + .control-mark::after {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background@2x.jpg");
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background@2x.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg");
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg");
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background/background@2x.webp"), url("../img/background/background@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;

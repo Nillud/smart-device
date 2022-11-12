@@ -3,40 +3,40 @@ import {initModals} from './modules/modals/init-modals';
 import {addMask} from './mask';
 
 // ---------------------------------
-const buttonNoJs = document.querySelectorAll('[data-button]');
+const BUTTON_NOJS = document.querySelectorAll('[data-button]');
 
-const requestButton = document.querySelector('[data-request-button]');
-const modalRequest = document.querySelector('[data-modal]');
-const scrollButton = document.querySelector('[data-scroll-button]');
-const questionsBlock = document.querySelector('[data-questions]');
+const REQUEST_BUTTON = document.querySelector('[data-request-button]');
+const MODAL_REQUEST = document.querySelector('[data-modal]');
+const SRCOLL_BUTTON = document.querySelector('[data-scroll-button]');
+const QUESTIONS_BLOCK = document.querySelector('[data-questions]');
 
-const buttonMore = document.querySelector('[data-button-more]');
-const aboutDescription = document.querySelector('[data-description]');
-const aboutMobile = document.querySelector('[data-description-mobile');
+const BUTTON_MORE = document.querySelector('[data-button-more]');
+const ABOUT_DESCRIPTION = document.querySelector('[data-description]');
+const ABOUT_MOBILE = document.querySelector('[data-description-mobile');
 
-const accordeonFields = document.querySelectorAll('[data-accordeon-field]');
+const ACCORDEON_FIELDS = document.querySelectorAll('[data-accordeon-field]');
 
-const submitButton = document.querySelector('[data-form-submit]');
-const modalSubmitButton = document.querySelector('[data-modal-submit]');
+const SUBMIT_BUTTON = document.querySelector('[data-form-submit]');
+const MODAL_SUBMIT_BUTTON = document.querySelector('[data-modal-submit]');
 
-const nameInput = document.querySelector('[data-name]');
-const nameInputModal = document.querySelector('[data-name-modal');
-const phoneInput = document.querySelector('[data-phone]');
-const phoneInputModal = document.querySelector('[data-phone-modal]');
+const NAME_INPUT = document.querySelector('[data-name]');
+const NAME_INPUT_MODAL = document.querySelector('[data-name-modal');
+const PHONE_INPUT = document.querySelector('[data-phone]');
+const PHONE_INPUT_MODAL = document.querySelector('[data-phone-modal]');
 
 const pageLoad = () => {
-  requestButton.href = '#';
+  REQUEST_BUTTON.href = '#';
 
-  buttonNoJs.forEach((button) => {
+  BUTTON_NOJS.forEach((button) => {
     button.classList.remove('no-js');
   });
 
-  aboutDescription.classList.remove('is-active');
-  aboutMobile.classList.remove('is-active');
+  ABOUT_DESCRIPTION.classList.remove('is-active');
+  ABOUT_MOBILE.classList.remove('is-active');
 };
 
 const closeAccordeons = () => {
-  accordeonFields.forEach((field) => {
+  ACCORDEON_FIELDS.forEach((field) => {
     field.classList.remove('is-active');
     field.classList.add('inactive');
   });
@@ -44,21 +44,19 @@ const closeAccordeons = () => {
 
 const openAccordeon = (field) => {
   if (field.classList.contains('inactive')) {
-    field.classList.remove('inactive');
-    field.classList.add('is-active');
+    field.classList.toggle('is-active');
   } else {
-    field.classList.remove('is-active');
-    field.classList.add('inactive');
+    field.classList.toggle('inactive');
   }
 };
 
-const validatePhone = () => {
-  if (phoneInput.value.length <= 10) {
-    phoneInput.style.backgroundColor = 'rgba(227, 38, 54, 0.8)';
-    submitButton.disabled = true;
+const validatePhone = (input, submit) => {
+  if (input.value.length <= 10) {
+    input.style.backgroundColor = 'rgba(227, 38, 54, 0.8)';
+    submit.disabled = true;
   } else {
-    phoneInput.style.background = 'rgba(4,20,39,.15)';
-    submitButton.disabled = false;
+    input.style.background = 'rgba(4,20,39,.15)';
+    submit.disabled = false;
   }
 };
 
@@ -72,65 +70,69 @@ window.addEventListener('DOMContentLoaded', () => {
   pageLoad();
 
   const setDataToStore = () => {
-    if (modalRequest.classList.contains('is-active')) {
-      localStorage.setItem('nameModal', nameInputModal);
-      localStorage.setItem('phoneModal', phoneInputModal);
+    if (MODAL_REQUEST.classList.contains('is-active')) {
+      localStorage.setItem('nameModal', NAME_INPUT_MODAL);
+      localStorage.setItem('phoneModal', PHONE_INPUT_MODAL);
     } else {
-      localStorage.setItem('name', nameInput);
-      localStorage.setItem('phone', phoneInput);
+      localStorage.setItem('name', NAME_INPUT);
+      localStorage.setItem('phone', PHONE_INPUT);
     }
   };
 
-  phoneInput.addEventListener('input', () => {
-    addMask(phoneInput);
+  PHONE_INPUT.addEventListener('input', () => {
+    addMask(PHONE_INPUT);
   });
 
-  phoneInput.addEventListener('change', () => {
-    validatePhone();
+  PHONE_INPUT.addEventListener('change', () => {
+    validatePhone(PHONE_INPUT, SUBMIT_BUTTON);
   });
 
-  phoneInputModal.addEventListener('input', () => {
-    addMask(phoneInputModal);
+  PHONE_INPUT_MODAL.addEventListener('input', () => {
+    addMask(PHONE_INPUT_MODAL);
   });
 
-  submitButton.addEventListener('click', () => {
+  PHONE_INPUT_MODAL.addEventListener('change', () => {
+    validatePhone(PHONE_INPUT_MODAL, MODAL_SUBMIT_BUTTON);
+  });
+
+  SUBMIT_BUTTON.addEventListener('click', () => {
     setDataToStore();
   });
 
-  modalSubmitButton.addEventListener('click', () => {
+  MODAL_SUBMIT_BUTTON.addEventListener('click', () => {
     setDataToStore();
   });
 
-  scrollButton.addEventListener('click', () => {
-    if (scrollButton) {
-      questionsBlock.scrollIntoView({
+  SRCOLL_BUTTON.addEventListener('click', () => {
+    if (SRCOLL_BUTTON) {
+      QUESTIONS_BLOCK.scrollIntoView({
         block: 'nearest',
         behavior: 'smooth',
       });
     }
   });
 
-  buttonMore.addEventListener('click', () => {
-    if (buttonMore) {
-      if (aboutDescription.classList.contains('is-active')) {
+  BUTTON_MORE.addEventListener('click', () => {
+    if (BUTTON_MORE) {
+      if (ABOUT_DESCRIPTION.classList.contains('is-active')) {
         if (window.screen.width <= 767) {
-          if (aboutMobile.classList.contains('is-active')) {
-            aboutMobile.classList.remove('is-active');
+          if (ABOUT_MOBILE.classList.contains('is-active')) {
+            ABOUT_MOBILE.classList.remove('is-active');
           }
         }
-        aboutDescription.classList.remove('is-active');
-        buttonMore.textContent = 'Подробнее';
+        ABOUT_DESCRIPTION.classList.remove('is-active');
+        BUTTON_MORE.textContent = 'Подробнее';
       } else {
         if (window.screen.width <= 767) {
-          aboutMobile.classList.add('is-active');
+          ABOUT_MOBILE.classList.add('is-active');
         }
-        aboutDescription.classList.add('is-active');
-        buttonMore.textContent = 'Свернуть';
+        ABOUT_DESCRIPTION.classList.add('is-active');
+        BUTTON_MORE.textContent = 'Свернуть';
       }
     }
   });
 
-  accordeonFields.forEach((field) => {
+  ACCORDEON_FIELDS.forEach((field) => {
     field.classList.remove('nojs');
     field.classList.add('inactive');
 

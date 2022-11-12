@@ -169,6 +169,10 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+
+    &:disabled {
+      opacity: 0.6;
+    }
   }
 
   &__checkbox {
