@@ -1,6 +1,6 @@
 .form {
   width: 47.9%;
-  margin-left: 5px;
+  margin-left: 120px;
   margin-bottom: 150px;
   margin-top: 165px;
   display: flex;
@@ -59,7 +59,7 @@
   color: #ffffff;
 
   &::placeholder {
-    color: #E5E5E5;
+    color: #bebebe;
   }
 
   @include hover-focus {
@@ -81,7 +81,7 @@
   color: #ffffff;
 
   &::placeholder {
-    color: #E5E5E5;
+    color: #bebebe;
   }
 
   @include hover-focus {
@@ -149,6 +149,7 @@
 
   @include vp-767 {
     width: 100%;
+    padding-top: 15px;
     min-width: 270px;
     margin-bottom: 15px;
     margin-right: 0;
@@ -159,6 +160,7 @@
   margin-top: 15px;
   display: flex;
   color: #ffffff;
+  cursor: pointer;
 
   @include hover-focus {
     opacity: 0.6;
@@ -175,15 +177,18 @@
   }
 }
 
-.form__text {
+.form__checkbox p {
   opacity: 0.8;
   font-size: 14px;
   line-height: 16px;
   max-width: 234px;
+  margin-bottom: 0;
 
   @include vp-767 {
     max-width: none;
     width: 100%;
+    margin-bottom: 0;
+    line-height: 16px;
   }
 }
 
@@ -195,7 +200,6 @@ input[type="checkbox"]+.control-mark {
   height: 15px;
   border: 1px solid #FFFFFF;
   border-radius: 2px;
-  cursor: pointer;
 
   @include hover-focus {
     opacity: 0.6;

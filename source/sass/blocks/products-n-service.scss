@@ -12,8 +12,8 @@
   display: block;
   width: 63.5%;
   margin: 0 auto;
-  margin-bottom: 53px;
-  padding-top: 66px;
+  margin-bottom: 54px;
+  padding-top: 65px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -65,7 +65,7 @@
 
   @include vp-1023 {
     width: 87%;
-    padding-bottom: 75px;
+    padding-bottom: 76px;
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, 250px);
     gap: 30px;

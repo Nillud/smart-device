@@ -122,7 +122,7 @@
   display: block;
   margin-bottom: 30px;
   padding: 15px 25px;
-  min-width: 410px;
+  max-width: 410px;
   min-height: 55px;
   background: #00B2FF;
   border: none;
@@ -150,9 +150,9 @@
     margin-left: 0;
     font-size: 14px;
     line-height: 16px;
-    min-width: 270px;
+    max-width: 270px;
     min-height: 40px;
-    padding: 10px 30px;
+    padding: 12px 30px;
   }
 }
 

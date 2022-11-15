@@ -60,7 +60,7 @@
 
 .footer-nav__section {
   margin-top: 52px;
-  margin-bottom: 34px;
+  margin-bottom: 37px;
 
   &:first-child {
     margin-left: auto;
@@ -122,7 +122,6 @@
 
 .footer-nav__section li {
   margin-bottom: 8px;
-  margin-right: 30px;
 
   @include vp-1023 {
     margin-bottom: 8px;

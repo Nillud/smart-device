@@ -1,15 +1,11 @@
-.advantages ul {
+.advantages-wrapper {
   margin: 120px auto 90px;
-  padding: 0;
-  width: 63.6%;
+  padding-left: 30px;
+  padding-right: 30px;
   min-width: 750px;
-  min-height: 630px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  list-style-type: none;
 
   @include vp-1023 {
+    padding: 0;
     width: 87%;
     min-width: 670px;
     margin-top: 80px;
@@ -17,11 +13,25 @@
   }
 
   @include vp-767 {
-    flex-direction:  column;
     margin-top: 50px;
     margin-bottom: 16px;
     min-width: 270px;
     width: 84%;
+  }
+}
+
+.advantages ul {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1222px;
+  min-height: 630px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  @include vp-767 {
+    flex-direction:  column;
   }
 }
 

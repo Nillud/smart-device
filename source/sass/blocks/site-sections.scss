@@ -32,6 +32,8 @@
   }
 
   @include vp-1023 {
+    width: 100%;
+    min-width: 220px;
     max-height: none;
   }
 
@@ -42,12 +44,12 @@
 
 .site-sections li {
   display: block;
-  width: 46%;
+  width: 100%;
   height: auto;
 }
 
 .site-sections a {
   display: block;
-  min-width: 220px;
+  width: 100%;
   height: auto;
 }

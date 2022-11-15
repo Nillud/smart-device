@@ -15,7 +15,7 @@
   @include vp-767 {
     margin-top: 35px;
     margin-bottom: 0;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
     flex-direction: column;
   }
 }
@@ -51,10 +51,9 @@
   height: 45px;
   align-self: center;
   margin-left: 15px;
-  margin-top: 6px;
 
   @include vp-767 {
-    margin-top: 4px;
+    margin-top: 0;
     margin-left: 15px;
   }
 }

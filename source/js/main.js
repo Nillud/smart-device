@@ -23,10 +23,14 @@ const NAME_INPUT = document.querySelector('[data-name]');
 const NAME_INPUT_MODAL = document.querySelector('[data-name-modal');
 const PHONE_INPUT = document.querySelector('[data-phone]');
 const PHONE_INPUT_MODAL = document.querySelector('[data-phone-modal]');
+const QUESTION_INPUT = document.querySelector('[data-form-question]');
+const QUESTION_INPUT_MODAL = document.querySelector('[data-form-question-modal]');
 
 const pageLoad = () => {
   REQUEST_BUTTON.href = '#';
-
+  SRCOLL_BUTTON.href = '#';
+  PHONE_INPUT.removeAttribute('pattern');
+  PHONE_INPUT_MODAL.removeAttribute('pattern');
   BUTTON_NOJS.forEach((button) => {
     button.classList.remove('no-js');
   });
@@ -52,10 +56,10 @@ const openAccordeon = (field) => {
 
 const validatePhone = (input, submit) => {
   if (input.value.length <= 10) {
-    input.style.backgroundColor = 'rgba(227, 38, 54, 0.8)';
+    input.style.outline = 'rgba(227, 38, 54, 0.8) 2px solid';
     submit.disabled = true;
   } else {
-    input.style.background = 'rgba(4,20,39,.15)';
+    input.style.outline = 'none';
     submit.disabled = false;
   }
 };
@@ -73,9 +77,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (MODAL_REQUEST.classList.contains('is-active')) {
       localStorage.setItem('nameModal', NAME_INPUT_MODAL);
       localStorage.setItem('phoneModal', PHONE_INPUT_MODAL);
+      localStorage.setItem('question', QUESTION_INPUT_MODAL);
     } else {
       localStorage.setItem('name', NAME_INPUT);
       localStorage.setItem('phone', PHONE_INPUT);
+      localStorage.setItem('question', QUESTION_INPUT);
     }
   };
 
@@ -103,8 +109,9 @@ window.addEventListener('DOMContentLoaded', () => {
     setDataToStore();
   });
 
-  SRCOLL_BUTTON.addEventListener('click', () => {
+  SRCOLL_BUTTON.addEventListener('click', (e) => {
     if (SRCOLL_BUTTON) {
+      e.preventDefault();
       QUESTIONS_BLOCK.scrollIntoView({
         block: 'nearest',
         behavior: 'smooth',
