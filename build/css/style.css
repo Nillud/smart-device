@@ -730,7 +730,7 @@ button,
 }
 
 .modal__header {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 15px;
   display: block;
   width: 420px;
@@ -756,7 +756,7 @@ button,
 }
 
 .modal__description {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 40px;
   display: block;
   width: 380px;
@@ -882,7 +882,7 @@ button,
   align-items: center;
 }
 
-.modal__text {
+.modal span + span {
   margin-top: 11px;
   font-family: "PT Mono", Courier, monospace;
   font-style: normal;
@@ -1011,7 +1011,6 @@ button,
   column-gap: 30px;
   row-gap: 10px;
   list-style-type: none;
-  margin: 0;
   margin-top: 45px;
   margin-bottom: 51px;
   margin-left: auto;
@@ -1089,7 +1088,6 @@ button,
 
 .intro h1 {
   min-width: 970px;
-  margin: 0;
   margin-bottom: 31px;
   margin-top: 305px;
   font-family: "Roboto Condensed", Arial, sans-serif;
@@ -1209,7 +1207,7 @@ button,
 .advantages p {
   display: block;
   min-height: 120px;
-  margin: 0;
+  margin-bottom: 0;
   margin-top: 14px;
   font-family: "PT Mono", "Courier New", monospace;
   font-style: normal;
@@ -1251,7 +1249,7 @@ button,
 }
 
 .about-company h2 {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 12px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
@@ -1262,7 +1260,7 @@ button,
 }
 
 .about-company p {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 20px;
   font-family: "PT Mono", Courier, monospace;
   font-style: normal;
@@ -1333,8 +1331,7 @@ button,
 .products-n-service ul {
   list-style: none;
   margin: 0 auto;
-  padding: 0;
-  padding-bottom: 140px;
+  padding: 0 0 140px 0;
   width: 63.54%;
   display: -ms-grid;
   display: grid;
@@ -1448,7 +1445,7 @@ button,
 }
 
 .questions h2 {
-  margin: 0;
+  margin-top: 0;
   margin-left: -5px;
   margin-bottom: 13px;
   font-family: "Roboto Condensed", Arial, sans-serif;
@@ -1460,7 +1457,7 @@ button,
 }
 
 .questions p {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 34px;
   font-family: "PT Mono", Courier, monospace;
   font-style: normal;
@@ -1637,7 +1634,7 @@ button,
   opacity: 0.6;
 }
 
-.form__checkbox p {
+.form__checkbox span + span {
   opacity: 0.8;
   font-size: 14px;
   line-height: 16px;
@@ -1962,7 +1959,7 @@ input[type=checkbox]:checked + .control-mark::after {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    margin: 0;
+    margin-left: 0;
     margin-top: 20px;
     margin-bottom: 40px;
     margin-right: 70px;
@@ -2572,7 +2569,7 @@ input[type=checkbox]:checked + .control-mark::after {
     margin-left: 5px;
   }
 
-  .form__checkbox p {
+  .form__checkbox span + span {
     max-width: none;
     width: 100%;
     margin-bottom: 0;

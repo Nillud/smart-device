@@ -46,13 +46,13 @@ const closeAccordeons = () => {
   });
 };
 
-const openAccordeon = (field) => {
-  if (field.classList.contains('inactive')) {
-    field.classList.toggle('is-active');
-  } else {
-    field.classList.toggle('inactive');
-  }
-};
+// const openAccordeon = (field) => {
+//   if (field.classList.contains('inactive')) {
+//     field.classList.toggle('is-active');
+//   } else {
+//     field.classList.toggle('inactive');
+//   }
+// };
 
 const validatePhone = (input, submit) => {
   if (input.value.length <= 10) {
@@ -140,17 +140,19 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   ACCORDEON_FIELDS.forEach((field) => {
-    field.classList.remove('nojs');
-    field.classList.add('inactive');
+    if (window.screen.width <= 767) {
+      field.classList.remove('nojs');
+      field.classList.add('inactive');
 
-    field.addEventListener('click', () => {
-      if (field.classList.contains('is-active')) {
-        openAccordeon(field);
-      } else {
-        closeAccordeons();
-        openAccordeon(field);
-      }
-    });
+      field.addEventListener('click', () => {
+        if (field.classList.contains('is-active')) {
+          field.classList.toggle('is-active');
+        } else {
+          closeAccordeons();
+          field.classList.toggle('is-active');
+        }
+      });
+    }
   });
 
   // Modules

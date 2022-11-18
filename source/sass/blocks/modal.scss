@@ -72,7 +72,7 @@
   }
 
   &__header {
-    margin: 0;
+    margin-top: 0;
     margin-bottom: 15px;
     display: block;
     width: 420px;
@@ -100,7 +100,7 @@
   }
 
   &__description {
-    margin: 0;
+    margin-top: 0;
     margin-bottom: 40px;
     display: block;
     width: 380px;
@@ -180,7 +180,7 @@
     align-items: center;
   }
 
-  &__text {
+  & span+span {
     margin-top: 11px;
     font-family: "PT Mono", Courier, monospace;
     font-style: normal;
