@@ -76,7 +76,7 @@
     margin-bottom: 15px;
     display: block;
     width: 420px;
-    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -104,7 +104,7 @@
     margin-bottom: 40px;
     display: block;
     width: 380px;
-    font-family: "PT Mono", Courier, monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -125,7 +125,7 @@
     background: rgba(4, 20, 39, 0.15);
     border: none;
     border-radius: 3px;
-    font-family: "PT Mono", Courier, monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -144,7 +144,7 @@
     background: rgba(4, 20, 39, 0.15);
     border: none;
     border-radius: 3px;
-    font-family: "PT Mono", Courier, monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -162,7 +162,7 @@
     background: #041427;
     border: none;
     border-radius: 3px;
-    font-family: "Roboto Condensed", Arial, sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -180,13 +180,13 @@
     align-items: center;
   }
 
-  & span+span {
+  & span + span {
     margin-top: 11px;
-    font-family: "PT Mono", Courier, monospace;
+    font-family: "PT Mono", "Courier", monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.8;
   }
 

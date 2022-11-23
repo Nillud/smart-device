@@ -1,22 +1,35 @@
 .main-nav {
   position: fixed;
+  width: 100%;
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: 999;
+}
+
+.main-nav .container {
   order: 900;
   display: flex;
   margin: 0 auto;
-  width: 100%;
+  padding: 0 40px;
+  max-width: 1664px;
   min-height: 120px;
   flex-direction: row;
   justify-content: space-between;
-  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   z-index: 1000;
+
+
+  @include vp-1439 {
+    padding: 0 32px;
+  }
 
   @include vp-1023 {
     min-height: 100px;
     margin: 0;
+    padding: 0 24px;
   }
 
   @include vp-767 {
     min-height: 70px;
+    padding: 0 16px;
   }
 }
 
@@ -50,14 +63,14 @@
     height: 55px;
     margin-top: 20px;
     margin-right: 0;
-    margin-left: 50px;
+    margin-left: 26px;
   }
 
   @include vp-767 {
     width: 35px;
     height: 35px;
     margin-top: 15px;
-    margin-left: 26px;
+    margin-left: 10px;
   }
 }
 
@@ -101,21 +114,21 @@
     margin-left: 0;
     margin-top: 20px;
     margin-bottom: 40px;
-    margin-right: 70px;
+    margin-right: 46px;
   }
 
   @include vp-767 {
     height: 60px;
     margin-bottom: 0;
     margin-top: 10px;
-    margin-right: 35px;
+    margin-right: 19px;
   }
 }
 
 .main-nav__contacts {
   display: flex;
   min-width: 225px;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-size: 16px;
   color: #f2f5f6;
   min-height: 20px;
@@ -152,9 +165,9 @@
   margin-top: 35px;
   margin-right: auto;
   background: none;
-  border: 1px solid #F2F5F7;
+  border: 1px solid #f2f5f7;
   border-radius: 3px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;

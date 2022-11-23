@@ -1,5 +1,5 @@
 .footer-nav {
-  position:sticky;
+  position: sticky;
   display: flex;
   margin: 0 auto;
   background: #041827;
@@ -98,7 +98,7 @@
       display: block;
     }
 
-  .footer-nav__list {
+    .footer-nav__list {
       display: none;
     }
   }
@@ -140,7 +140,7 @@
 }
 
 .footer-nav__section a {
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -161,7 +161,7 @@
 .footer-nav__section p {
   margin-top: 5px;
   margin-bottom: 22px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -169,7 +169,7 @@
   letter-spacing: 0.05em;
   align-items: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 
   @include vp-767 {
     margin-top: 22px;

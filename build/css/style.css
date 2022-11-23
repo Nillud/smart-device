@@ -734,7 +734,7 @@ button,
   margin-bottom: 15px;
   display: block;
   width: 420px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -760,7 +760,7 @@ button,
   margin-bottom: 40px;
   display: block;
   width: 380px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -786,7 +786,7 @@ button,
   background: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -826,7 +826,7 @@ button,
   background: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -860,7 +860,7 @@ button,
   background: #041427;
   border: none;
   border-radius: 3px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -884,11 +884,11 @@ button,
 
 .modal span + span {
   margin-top: 11px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.8;
 }
 
@@ -927,6 +927,14 @@ button,
 
 .main-nav {
   position: fixed;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: 999;
+}
+
+.main-nav .container {
   -webkit-box-ordinal-group: 901;
   -ms-flex-order: 900;
   order: 900;
@@ -934,7 +942,8 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 100%;
+  padding: 0 40px;
+  max-width: 1664px;
   min-height: 120px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -943,9 +952,6 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
-  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   z-index: 1000;
 }
 
@@ -1023,7 +1029,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   min-width: 225px;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-size: 16px;
   color: #f2f5f6;
   min-height: 20px;
@@ -1045,9 +1051,9 @@ button,
   margin-top: 35px;
   margin-right: auto;
   background: none;
-  border: 1px solid #F2F5F7;
+  border: 1px solid #f2f5f7;
   border-radius: 3px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
@@ -1082,7 +1088,17 @@ button,
   background-color: #041827;
 }
 
+.intro .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .intro__block {
+  margin: 0 auto;
   margin-bottom: 250px;
 }
 
@@ -1090,7 +1106,7 @@ button,
   min-width: 970px;
   margin-bottom: 31px;
   margin-top: 305px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 80px;
@@ -1105,12 +1121,12 @@ button,
   margin-bottom: 47px;
   display: block;
   max-width: 685px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
-  color: #F2F5F7;
+  color: #f2f5f7;
   text-align: left;
 }
 
@@ -1122,10 +1138,10 @@ button,
   padding: 15px 25px;
   max-width: 410px;
   min-height: 55px;
-  background: #00B2FF;
+  background: #00b2ff;
   border: none;
   border-radius: 3px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1147,8 +1163,7 @@ button,
 
 .advantages-wrapper {
   margin: 120px auto 90px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 40px;
   min-width: 750px;
 }
 
@@ -1175,7 +1190,7 @@ button,
   width: 48.69%;
   padding: 40px 45px 35px;
   margin-bottom: 30px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
 }
 
 .advantages li::before {
@@ -1196,12 +1211,12 @@ button,
 .advantages h3 {
   margin-bottom: 0;
   margin-top: 13px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  color: #00B2FF;
+  color: #00b2ff;
 }
 
 .advantages p {
@@ -1218,7 +1233,7 @@ button,
 }
 
 .advantages__item svg {
-  fill: #00B2FF;
+  fill: #00b2ff;
 }
 
 .advantages__item.focus-visible:focus svg {
@@ -1251,7 +1266,7 @@ button,
 .about-company h2 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -1262,7 +1277,7 @@ button,
 .about-company p {
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1288,10 +1303,10 @@ button,
   min-height: 45px;
   padding: 12px 13px 10px 12px;
   background: none;
-  border: 1px solid #00B2ff;
+  border: 1px solid #00b2ff;
   border-radius: 3px;
-  color: #00B2ff;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  color: #00b2ff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1316,12 +1331,12 @@ button,
   margin: 0 auto;
   margin-bottom: 54px;
   padding-top: 65px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .products-n-service__header span:last-child {
@@ -1386,12 +1401,12 @@ button,
   min-height: 55px;
   margin: 0;
   padding: 47px 80px 0 40px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .products-n-service__list span {
@@ -1403,7 +1418,7 @@ button,
   background-color: #00b2ff;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
 }
 
 .products-n-service .tablet {
@@ -1448,7 +1463,7 @@ button,
   margin-top: 0;
   margin-left: -5px;
   margin-bottom: 13px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -1459,7 +1474,7 @@ button,
 .questions p {
   margin-top: 0;
   margin-bottom: 34px;
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1482,7 +1497,7 @@ button,
 }
 
 .form label {
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "S", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1600,7 +1615,7 @@ button,
   background: #041427;
   border: none;
   border-radius: 3px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -1648,7 +1663,7 @@ input[type=checkbox] + .control-mark {
   margin-top: 7px;
   width: 15px;
   height: 15px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 2px;
 }
 
@@ -1730,7 +1745,7 @@ input[type=checkbox]:checked + .control-mark::after {
 }
 
 .footer-nav__section a {
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1746,7 +1761,7 @@ input[type=checkbox]:checked + .control-mark::after {
 .footer-nav__section p {
   margin-top: 5px;
   margin-bottom: 22px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -1756,7 +1771,7 @@ input[type=checkbox]:checked + .control-mark::after {
   -ms-flex-align: center;
   align-items: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer-social {
@@ -1931,6 +1946,14 @@ input[type=checkbox]:checked + .control-mark::after {
   .container {
     padding: 0 32px;
   }
+
+  .main-nav .container {
+    padding: 0 32px;
+  }
+
+  .advantages-wrapper {
+    padding: 0 32px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1938,9 +1961,10 @@ input[type=checkbox]:checked + .control-mark::after {
     padding: 0 24px;
   }
 
-  .main-nav {
+  .main-nav .container {
     min-height: 100px;
     margin: 0;
+    padding: 0 24px;
   }
 
   .main-nav__logo {
@@ -1948,7 +1972,7 @@ input[type=checkbox]:checked + .control-mark::after {
     height: 55px;
     margin-top: 20px;
     margin-right: 0;
-    margin-left: 50px;
+    margin-left: 26px;
   }
 
   .main-nav ul {
@@ -1962,7 +1986,7 @@ input[type=checkbox]:checked + .control-mark::after {
     margin-left: 0;
     margin-top: 20px;
     margin-bottom: 40px;
-    margin-right: 70px;
+    margin-right: 46px;
   }
 
   .main-nav__contacts {
@@ -2017,8 +2041,8 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 
   .advantages-wrapper {
-    padding: 0;
-    width: 87%;
+    padding: 0 24px;
+    width: 93%;
     min-width: 670px;
     margin-top: 80px;
     margin-bottom: 45px;
@@ -2308,15 +2332,16 @@ input[type=checkbox]:checked + .control-mark::after {
     width: 100%;
   }
 
-  .main-nav {
+  .main-nav .container {
     min-height: 70px;
+    padding: 0 16px;
   }
 
   .main-nav__logo {
     width: 35px;
     height: 35px;
     margin-top: 15px;
-    margin-left: 26px;
+    margin-left: 10px;
   }
 
   .main-nav__logo-text {
@@ -2327,18 +2352,21 @@ input[type=checkbox]:checked + .control-mark::after {
     height: 60px;
     margin-bottom: 0;
     margin-top: 10px;
-    margin-right: 35px;
+    margin-right: 19px;
   }
 
   .intro {
     margin-top: 32px;
-    padding: 0 25px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/background-mobile.jpg");
     background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/background-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #041827;
+  }
+
+  .intro .container {
+    padding: 0 25px;
   }
 
   .intro__block {
@@ -2378,10 +2406,11 @@ input[type=checkbox]:checked + .control-mark::after {
   }
 
   .advantages-wrapper {
+    padding: 0 16px;
     margin-top: 50px;
     margin-bottom: 16px;
     min-width: 270px;
-    width: 84%;
+    width: 95%;
   }
 
   .advantages ul {

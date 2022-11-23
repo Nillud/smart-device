@@ -13,7 +13,7 @@
 }
 
 .form label {
-  font-family: "PT Mono", Courier, monospace;
+  font-family: "PT Mono", "S", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -120,7 +120,7 @@
   background: #041427;
   border: none;
   border-radius: 3px;
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -177,7 +177,7 @@
   }
 }
 
-.form__checkbox span+span {
+.form__checkbox span + span {
   opacity: 0.8;
   font-size: 14px;
   line-height: 16px;
@@ -192,13 +192,13 @@
   }
 }
 
-input[type="checkbox"]+.control-mark {
+input[type="checkbox"] + .control-mark {
   display: block;
   margin-right: 11px;
   margin-top: 7px;
   width: 15px;
   height: 15px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 2px;
 
   @include hover-focus {
@@ -206,12 +206,13 @@ input[type="checkbox"]+.control-mark {
   }
 }
 
-input[type="checkbox"]:focus+.control-mark {
+input[type="checkbox"]:focus + .control-mark {
   outline: 1px #ffffff solid;
 }
 
-input[type="checkbox"]:checked+.control-mark {
+input[type="checkbox"]:checked + .control-mark {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;

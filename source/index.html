@@ -15,40 +15,44 @@
     <div class="wrapper">
       <header>
         <nav class="main-nav">
-          <a class="main-nav__logo">
-            <img class="main-nav__logo-image" src="img/logo.svg" alt="логотип smart device." width="55" height="55">
-            <img class="main-nav__logo-text" src="img/logo-text.svg" alt="логотип описание." width="145" height="45">
-          </a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__contacts" href="mailto:info@sd.ru">
-                <svg width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#email"></use>
-                </svg>
-                <span>info@sd.ru</span>
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__contacts" href="tel:+74950005252">
-                <svg width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#phone"></use>
-                </svg>
-                <span>+7 (495) 000 52 52</span>
-              </a>
-            </li>
-          </ul>
-          <a class="main-nav__button button no-js" href="modal.html" data-open-modal="feedback" data-button data-request-button>Заказать звонок</a>
+          <div class="container">
+            <a class="main-nav__logo">
+              <img class="main-nav__logo-image" src="img/logo.svg" alt="логотип smart device." width="55" height="55">
+              <img class="main-nav__logo-text" src="img/logo-text.svg" alt="логотип описание." width="145" height="45">
+            </a>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__contacts" href="mailto:info@sd.ru">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#email"></use>
+                  </svg>
+                  <span>info@sd.ru</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__contacts" href="tel:+74950005252">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#phone"></use>
+                  </svg>
+                  <span>+7 (495) 000 52 52</span>
+                </a>
+              </li>
+            </ul>
+            <a class="main-nav__button button no-js" href="modal.html" data-open-modal="feedback" data-button data-request-button>Заказать звонок</a>
+          </div>
         </nav>
       </header>
       <main>
         <section class="intro">
-          <div class="intro__block">
-            <h1 class="intro__header">Печатные платы</h1>
-            <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="intro__button button" href="#questions" data-scroll-button>
-              <span>Получить бесплатную консультацию</span>
-              <span>Бесплатная консультация</span>
-            </a>
+          <div class="container">
+            <div class="intro__block">
+              <h1 class="intro__header">Печатные платы</h1>
+              <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+              <a class="intro__button button" href="#questions" data-scroll-button>
+                <span>Получить бесплатную консультацию</span>
+                <span>Бесплатная консультация</span>
+              </a>
+            </div>
           </div>
         </section>
         <section class="advantages">
@@ -60,28 +64,28 @@
                   <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
                 </svg>
                 <h3 class="advantages__item-header">Оперативные сроки </h3>
-                <p class="advantages__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
               </li>
               <li class="advantages__item">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite_auto.svg#suppliers"></use>
                 </svg>
                 <h3 class="advantages__item-header">Крупные поставщики</h3>
-                <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+                <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
               </li>
               <li class="advantages__item">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite_auto.svg#confidentiality"></use>
                 </svg>
                 <h3 class="advantages__item-header">Полная конфиденциальность</h3>
-                <p class="advantages__text">По желанию клиента  мы обеспечиваем полную конфиденциальность.</p>
+                <p>По желанию клиента  мы обеспечиваем полную конфиденциальность.</p>
               </li>
               <li class="advantages__item">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite_auto.svg#cost"></use>
                 </svg>
                 <h3 class="advantages__item-header">Персонализация стоимости</h3>
-                <p class="advantages__text">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+                <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
               </li>
             </ul>
           </div>
@@ -93,8 +97,12 @@
           </picture>
           <div class="about-company__text">
             <h2 class="about-company__header">О компании</h2>
-            <p class="about-company__description">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p class="about-company__description-mobile" data-description-mobile>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br><span>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            <div class="about-company__description">
+              <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+            </div>
+            <div class="about-company__description-mobile" data-description-mobile>
+              <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br><span>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            </div>
             <div class="about-company__description-more is-active" data-description>
               <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
                 Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
@@ -113,7 +121,7 @@
                 <h3 class="products-n-service__item-header">Производство<br>печатных плат</h3>
                 <span class="products-n-service__button">
                   <svg width="7" height="4">
-                    <use xlink:href="img/sprite_auto.svg#arrow"/>
+                    <use xlink:href="img/sprite_auto.svg#arrow"></use>
                   </svg>
                 </span>
               </a>
@@ -148,7 +156,7 @@
             </picture>
             <form class="questions__form form" action="https://echo.htmlacademy.ru" method="post">
               <h2 class="questions__header">Остались вопросы? Задайте их нам!</h2>
-              <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
+              <p>Мы проконсультируем Вас бесплатно</p>
               <div class="form__contacts">
                 <label class="form__field"><input type="text" name="name" id="name" placeholder="Имя" pattern="^[a-zA-ZА-Яа-яЁё]+$" title="Имя должно состоять из 2 или более букв" minlength="2" maxlength="25" required data-name></label>
                 <label class="form__field"><input type="text" name="phone" id="phone" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="введите номер телефона в формате +7 (xxx) xxx-xx-xx" data-phone required></label>
@@ -199,7 +207,7 @@
           </div>
           <div class="footer-nav__section nojs site-sections" data-accordeon-field data-accordeon-sections>
             <div class="footer-nav__accordeon">
-              <p class="footer-nav__header">Разделы сайта</p>
+              <p>Разделы сайта</p>
               <button class="footer-nav__button" data-accordeon-button></button>
             </div>
             <ul class="footer-nav__list">
@@ -244,7 +252,7 @@
           </div>
           <div class="footer-nav__section nojs contacts" data-accordeon-field data-accordeon-contacts>
             <div class="footer-nav__accordeon">
-              <p class="footer-nav__header">Наш офис</p>
+              <p>Наш офис</p>
               <button class="footer-nav__button" data-accordeon-button></button>
             </div>
             <ul class="footer-nav__list">
