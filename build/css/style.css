@@ -2473,11 +2473,11 @@ input[type=checkbox]:checked + .control-mark::after {
     line-height: 19px;
   }
 
-  .about-company__description-mobile span {
+  .about-company__description-mobile {
     display: none;
   }
 
-  .about-company__description-mobile.is-active span {
+  .about-company__description-mobile.is-active {
     display: block;
   }
 
