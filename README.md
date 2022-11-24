@@ -1,3 +1,3 @@
 # smart-device
 
-[index.html](source/index.html)
+[Главная страница](build/index.html)
